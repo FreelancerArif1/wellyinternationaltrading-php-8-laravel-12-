@@ -1,0 +1,22 @@
+.every_section {
+    /* background: #e9f0ff8c; */
+    margin: 0px 0px 30px 0px;
+    border-radius: 10px;
+    border: 1px solid #0033cc;
+}
+
+
+.video_relative {
+    position: relative;
+}
+
+.video_remove_absulate {
+    position: absolute;
+    z-index: 99;
+    top: 5px;
+    right: 5px;
+    padding: 5px 10px;
+    background: #f00;
+    color: #fff;
+    cursor: pointer;
+}
