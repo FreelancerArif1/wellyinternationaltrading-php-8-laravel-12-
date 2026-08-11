@@ -29,58 +29,7 @@
                 <div class="slider-content">
                   <div class="container height-100 d-flex align-items-center">
                     <div class="content-box slider-animation section-headings">
-                      <div class="subheading text-20 subheading-bg">
-                        <svg
-                          class="icon icon-14"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="14"
-                          height="14"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                        >
-                          <g clip-path="url(#clip0_9088_414319)">
-                            <path
-                              d="M8.71401 5.28599C11.7514 5.4205 14 5.9412 14 7C14 8.0588 11.7514 8.5795 8.71401 8.71401C8.5795 11.7514 8.0588 14 7 14C5.9412 14 5.4205 11.7514 5.28599 8.71401C2.2486 8.5795 -1.33117e-07 8.0588 0 7C4.62818e-08 5.94119 2.2486 5.4205 5.28599 5.28599C5.4205 2.2486 5.9412 0 7 0C8.0588 0 8.5795 2.2486 8.71401 5.28599Z"
-                              fill="CurrentColor"
-                            />
-                          </g>
-                          <defs>
-                            <clipPath>
-                              <rect
-                                width="14"
-                                height="14"
-                                fill="CurrentColor"
-                              />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                        <span>welcome to Zentra</span>
-                        <svg
-                          class="icon icon-14"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="14"
-                          height="14"
-                          viewBox="0 0 14 14"
-                          fill="none"
-                        >
-                          <g clip-path="url(#clip0_9088_4143)z">
-                            <path
-                              d="M8.71401 5.28599C11.7514 5.4205 14 5.9412 14 7C14 8.0588 11.7514 8.5795 8.71401 8.71401C8.5795 11.7514 8.0588 14 7 14C5.9412 14 5.4205 11.7514 5.28599 8.71401C2.2486 8.5795 -1.33117e-07 8.0588 0 7C4.62818e-08 5.94119 2.2486 5.4205 5.28599 5.28599C5.4205 2.2486 5.9412 0 7 0C8.0588 0 8.5795 2.2486 8.71401 5.28599Z"
-                              fill="CurrentColor"
-                            />
-                          </g>
-                          <defs>
-                            <clipPath>
-                              <rect
-                                width="14"
-                                height="14"
-                                fill="CurrentColor"
-                              />
-                            </clipPath>
-                          </defs>
-                        </svg>
-                      </div>
-                      <h2 class="heading text-90 fw-700">
+                      <h2 class="heading text-40 fw-700">
                         Business Growth Made Simple
                       </h2>
                       <div class="text text-18">
@@ -191,7 +140,7 @@
                           </defs>
                         </svg>
                       </div>
-                      <h2 class="heading text-90 fw-700">
+                      <h2 class="heading text-40 fw-700">
                         Business Growth Made Simple
                       </h2>
                       <div class="text text-18">
@@ -231,7 +180,7 @@
           </div>
 
           <!-- Slider navigation -->
-          <div class="slider-nav">
+          <!-- <div class="slider-nav">
             <div class="swiper-button-prev">
               <svg
                 class="icon icon-32"
@@ -268,7 +217,7 @@
                 />
               </svg>
             </div>
-          </div>
+          </div> -->
         </div>
       </hero-slider>
 
@@ -335,7 +284,7 @@
                     </defs>
                   </svg>
                 </div>
-                <h2 class="heading text-50" data-aos="fade-up">
+                <h2 class="heading text-30" data-aos="fade-up">
                   Redesigning business for solutions
                 </h2>
                 <div class="text text-18" data-aos="fade-up">
@@ -736,7 +685,7 @@
                 </defs>
               </svg>
             </div>
-            <h2 class="heading text-50" data-aos="fade-up">
+            <h2 class="heading text-30" data-aos="fade-up">
               Grow client base to boost business
             </h2>
           </div>
@@ -1121,7 +1070,7 @@
                   </defs>
                 </svg>
               </div>
-              <h2 class="heading text-50" data-aos="fade-right">
+              <h2 class="heading text-30" data-aos="fade-right">
                 Explore the Recent Works We Have Done!
               </h2>
             </div>
@@ -1301,7 +1250,7 @@
                     </svg>
                   </div>
                   <h2
-                    class="heading text-50"
+                    class="heading text-30"
                     data-aos="fade-right"
                     data-aos-delay="200"
                   >
@@ -1444,13 +1393,13 @@
                   data-aos="fade-up"
                   data-aos-delay="50"
                 >
-                  <h2 class="heading text-50" data-target="20">
+                  <h2 class="heading text-30" data-target="20">
                     0 <span>k+</span>
                   </h2>
                   <div class="text text-18 fw-500">Project completed</div>
                 </div>
                 <div class="counter-item">
-                  <h2 class="heading text-50" data-target="12">
+                  <h2 class="heading text-30" data-target="12">
                     0<span>k+</span>
                   </h2>
                   <div class="text text-18 fw-500">Happy customers</div>
@@ -1460,7 +1409,7 @@
                   data-aos="fade-down"
                   data-aos-delay="50"
                 >
-                  <h2 class="heading text-50" data-target="25">
+                  <h2 class="heading text-30" data-target="25">
                     0<span>+</span>
                   </h2>
                   <div class="text text-18 fw-500">Years experiences</div>
@@ -1518,7 +1467,7 @@
                 </defs>
               </svg>
             </div>
-            <h2 class="heading text-50" data-aos="fade-up">
+            <h2 class="heading text-30" data-aos="fade-up">
               Meet the experts behind your success
             </h2>
           </div>
@@ -2147,7 +2096,7 @@
                     </defs>
                   </svg>
                 </div>
-                <h2 class="heading text-50" data-aos="fade-up">
+                <h2 class="heading text-30" data-aos="fade-up">
                   See what our customers have to say about us
                 </h2>
               </div>
@@ -2579,7 +2528,7 @@
                 </defs>
               </svg>
             </div>
-            <h2 class="heading text-50" data-aos="fade-up" data-aos-delay="50">
+            <h2 class="heading text-30" data-aos="fade-up" data-aos-delay="50">
               Latest News From Us
             </h2>
           </div>

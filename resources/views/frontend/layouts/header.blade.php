@@ -1,14 +1,16 @@
     <sticky-header data-sticky-type="always">
       <header class="header-1 header-floating">
         <div class="container-fluid">
-          <div class="header-grid">
+          <div class="header-grid navlogo">
             <a class="header-logo" href="index.html" aria-label="Consulo">
-              <img
+              <!-- <img
                 src="frontend/assets/img/logo-white.png"
                 alt="Consulo Logo"
                 width="189"
                 height="32"
-              >
+              > -->
+              <img  src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}"
+                                alt="logo-image">
             </a>
             <drawer-menu>
               <nav class="header-nav drawer-menu">

@@ -1,0 +1,10 @@
+@media (min-width: 992px) {
+    .header-menu {
+        justify-content: left;
+    }
+}
+
+.navlogo img{
+   width: 150px;
+   height: auto;
+}
