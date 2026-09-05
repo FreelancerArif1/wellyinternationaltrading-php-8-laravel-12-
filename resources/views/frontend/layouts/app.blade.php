@@ -177,11 +177,22 @@
     </style>
 
     <!-- all css -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+ 
+
+
+
+
     <link rel="stylesheet" href="/frontend/assets/css/vendor.css">
     <link rel="stylesheet" href="/frontend/assets/css/style.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="/frontend/assets/css/custom.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
       
+     <link rel="stylesheet" href="/frontend/assets/css/theme.css?v=<?php echo time(); ?>">
+     
     <title>
         @hasSection('title')
             @yield('title')
@@ -202,6 +213,7 @@
     <!-- all js -->
     <script src="/frontend/assets/js/vendor.js" defer></script>
     <script src="/frontend/assets/js/main.js" defer></script>
+    
 </body>
 
 </html>
