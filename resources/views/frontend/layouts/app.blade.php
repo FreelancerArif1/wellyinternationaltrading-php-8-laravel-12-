@@ -34,10 +34,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- Favicons -->
-    <link rel="shortcut icon" href="{{ asset(Helper::getSettings('site_favicon')) }}">
-    <link rel="icon" href="{{ asset(Helper::getSettings('site_favicon')) }}" type="image/png">
-    <link rel="apple-touch-icon" href="{{ asset(Helper::getSettings('site_favicon')) }}">
-
+    <link rel="icon" type="image/png" href="{{ asset(Helper::getSettings('site_favicon')) }}?v={{ time() }}">
+    <link rel="apple-touch-icon" href="{{ asset(Helper::getSettings('site_favicon')) }}?v={{ time() }}">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <style>
