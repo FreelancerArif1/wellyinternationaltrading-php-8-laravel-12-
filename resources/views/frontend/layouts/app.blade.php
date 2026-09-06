@@ -33,9 +33,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('path/to/favicon-32x32.png') }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('path/to/apple-touch-icon.png') }}">
-
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="{{ asset(Helper::getSettings('site_favicon')) }}">
+    <link rel="icon" href="{{ asset(Helper::getSettings('site_favicon')) }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ asset(Helper::getSettings('site_favicon')) }}">
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
