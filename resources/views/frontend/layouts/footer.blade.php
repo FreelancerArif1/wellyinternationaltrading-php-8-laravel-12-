@@ -9,7 +9,7 @@
                 alt="logo-image">
         </a>
          <p class="mt-3">
-            {{ Str::words(Helper::getSettings('application_toll_free'), 40, '...') }}
+            {{ Str::words(Helper::getSettings('application_toll_free'), 30, '...') }}
         </p>
         </div>
         
@@ -32,8 +32,8 @@
               <li class="mb-2"><a href="#renewable-energy-solutions" class="text-white-50 text-decoration-none">Renewable Energy Solutions</a></li>
                <li class="mb-2"><a href="#china-business-travel-services" class="text-white-50 text-decoration-none">China Business Travel Services</a></li>
               <li class="mb-2"><a href="#consulting-services" class="text-white-50 text-decoration-none">Consulting Services</a></li>
-              <li class="mb-2"><a href="#textile-garment" class="text-white-50 text-decoration-none">Textile &amp; Garment</a></li>
-              <li class="mb-2"><a href="#plastic-raw-materials" class="text-white-50 text-decoration-none">Plastic Raw Materials</a></li>
+              <!-- <li class="mb-2"><a href="#textile-garment" class="text-white-50 text-decoration-none">Textile &amp; Garment</a></li>
+              <li class="mb-2"><a href="#plastic-raw-materials" class="text-white-50 text-decoration-none">Plastic Raw Materials</a></li> -->
             </ul>
         </div>
 
