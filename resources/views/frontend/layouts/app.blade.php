@@ -9,7 +9,7 @@
 
     <meta property="og:title" content="{{ Helper::getSettings('application_name') }}">
     <meta property="og:description" content="{{ Helper::getSettings('application_toll_free') }}">
-    <meta property="og:url" content="https://livenzagroup.com">
+    <meta property="og:url" content="https://wellyinternationaltrading.com">
     <meta property="og:image"
         content="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}">
     <meta property="og:image:width" content="400">
