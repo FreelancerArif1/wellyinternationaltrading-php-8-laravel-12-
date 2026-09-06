@@ -9,7 +9,7 @@
                 alt="logo-image">
         </a>
          <p class="mt-3">
-            {{ Str::words(Helper::getSettings('application_toll_free'), 30, '...') }}
+            {{ Str::words(Helper::getSettings('application_toll_free'), 25, '...') }}
         </p>
         </div>
         
