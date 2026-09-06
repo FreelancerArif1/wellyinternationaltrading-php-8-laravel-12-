@@ -1,6 +1,6 @@
   <!-- ========== FOOTER ========== -->
   <footer class="bg-dark text-white-50 pb-2  pt-2 bg-welly">
-    <div class="container pt-4">
+    <div class="container pt-4 footer_wrapper">
       <div class="row g-4">
         <div class="col-lg-4">
 

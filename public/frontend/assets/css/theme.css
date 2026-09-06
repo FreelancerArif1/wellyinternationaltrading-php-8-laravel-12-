@@ -598,3 +598,6 @@ html {
     margin-top: 10px !important;
     margin-bottom: 10px !important;
 }
+.footer_wrapper h6{
+  text-transform: uppercase;
+}
