@@ -440,7 +440,7 @@ html {
 
 
 .bg-welly2 {
-  background-image: url('../img/bg-slim.jpg');
+  /* background-image: url('../img/bg-slim.jpg'); */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -456,12 +456,12 @@ html {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(5, 15, 40, 0.55) 0%,
     rgba(5, 15, 40, 0.35) 50%,
     rgba(5, 15, 40, 0.6) 100%
-  );
+  ); */
   pointer-events: none;
   z-index: 0;
 }
@@ -538,6 +538,7 @@ html {
     visibility: visible;
     transform: translateY(0);
   }
+
 
   .hover-dropdown .dropdown-menu {
     display: block;
