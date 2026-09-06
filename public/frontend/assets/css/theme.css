@@ -519,7 +519,7 @@ html {
 .top-pointer-dropdown::before {
   content: "";
   position: absolute;
-  top: -8px; /* Position above the dropdown menu */
+  top: -6px; /* Position above the dropdown menu */
   left: 20px; /* Distance from the left edge */
   width: 0;
   height: 0;
@@ -563,7 +563,7 @@ html {
 }
 
 .top-pointer-dropdown .dropdown-item:hover {
-  background-color: #f1f5f9;
+  background-color: #dc92003b;
   color: #333;
 }
 .dropdown-item:focus, .dropdown-item:hover {
@@ -576,15 +576,15 @@ html {
 }
 .navbar-expand-lg .navbar-nav .dropdown-menu {
   position: absolute;
-  top: 53px;
+  top: 48px;
   border-radius: 0 0 5px 5px;
   left: 15px;
   padding: 0;
 }
 
 .dropdown-item.active, .dropdown-item:active {
-  background-color: #dc9200;
-      color: #fff;
+  background-color: #dc9200  !important;
+  color: #fff !important;
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu  li{
