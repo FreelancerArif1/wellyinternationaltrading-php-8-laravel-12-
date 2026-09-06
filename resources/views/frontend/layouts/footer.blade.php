@@ -1,6 +1,6 @@
   <!-- ========== FOOTER ========== -->
-  <footer class="bg-dark text-white-50 py-5 bg-welly">
-    <div class="container">
+  <footer class="bg-dark text-white-50 pb-2  pt-2 bg-welly">
+    <div class="container pt-4">
       <div class="row g-4">
         <div class="col-lg-4">
 
@@ -8,32 +8,40 @@
             <img src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}"
                 alt="logo-image">
         </a>
-          <!-- <img src="https://newlead.asia/wp-content/uploads/2025/10/logo2.png" alt="NEWLEAD" height="40" class="mb-3" style="filter: brightness(0) invert(1);"> -->
-          <p class="mb-3">Engineering Precision. Powering Production.</p>
-          <p class="small">Newlead Global SDN BHD<br>Integrated solutions for SMT, 3C, automotive, medical &amp; more.</p>
+         <p class="mt-3">
+            {{ Str::words(Helper::getSettings('application_toll_free'), 40, '...') }}
+        </p>
         </div>
+        
+        
         <div class="col-6 col-lg-2">
           <h6 class="text-white mb-3">Quick Links</h6>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#home" class="text-white-50 text-decoration-none">Home</a></li>
-            <li class="mb-2"><a href="#about" class="text-white-50 text-decoration-none">About Us</a></li>
-            <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none">Services</a></li>
-            <li class="mb-2"><a href="#contact" class="text-white-50 text-decoration-none">Contact</a></li>
-          </ul>
+              <li class="mb-2"><a href="/" class="text-white-50 text-decoration-none">Home</a></li>
+              <li class="mb-2"><a href="/about-us" class="text-white-50 text-decoration-none">About Us</a></li>
+              <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none">Our Services</a></li>
+              <li class="mb-2"><a href="/news" class="text-white-50 text-decoration-none">News</a></li>
+              <li class="mb-2"><a href="/contact-us" class="text-white-50 text-decoration-none">Contact Us</a></li>
+            </ul>
         </div>
         <div class="col-6 col-lg-3">
           <h6 class="text-white mb-3">Solutions</h6>
           <ul class="list-unstyled">
-            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Dispensing Equipment</a></li>
-            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Fixtures &amp; Jigs</a></li>
-            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">MRO Products</a></li>
-            <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Industrial Tools</a></li>
-          </ul>
+              <li class="mb-2"><a href="#truck-parts" class="text-white-50 text-decoration-none">Truck Parts</a></li>
+              <li class="mb-2"><a href="#industrial-heavy-equipment" class="text-white-50 text-decoration-none">Industrial Heavy Equipment</a></li>
+              <li class="mb-2"><a href="#renewable-energy-solutions" class="text-white-50 text-decoration-none">Renewable Energy Solutions</a></li>
+               <li class="mb-2"><a href="#china-business-travel-services" class="text-white-50 text-decoration-none">China Business Travel Services</a></li>
+              <li class="mb-2"><a href="#consulting-services" class="text-white-50 text-decoration-none">Consulting Services</a></li>
+              <li class="mb-2"><a href="#textile-garment" class="text-white-50 text-decoration-none">Textile &amp; Garment</a></li>
+              <li class="mb-2"><a href="#plastic-raw-materials" class="text-white-50 text-decoration-none">Plastic Raw Materials</a></li>
+            </ul>
         </div>
+
+
         <div class="col-lg-3">
           <h6 class="text-white mb-3">Contact</h6>
-          <p class="small mb-1"><i class="bi bi-geo-alt me-2"></i>Seremban, Negeri Sembilan, Malaysia</p>
-          <p class="small mb-1"><i class="bi bi-envelope me-2"></i>sales@sz-newlead.com</p>
+          <p class="small mb-1"><i class="bi bi-geo-alt me-2"></i>{{ Helper::getSettings('application_address') }}</p>
+          <p class="small mb-1"><i class="bi bi-envelope me-2"></i>{{ Helper::getSettings('application_email') }}</p>
           <div class="mt-3">
             <a href="#" class="text-white-50 me-3"><i class="bi bi-facebook fs-5"></i></a>
             <a href="#" class="text-white-50 me-3"><i class="bi bi-twitter-x fs-5"></i></a>
@@ -44,7 +52,7 @@
       </div>
       <hr class="border-secondary my-4">
       <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <p class="small mb-2 mb-md-0">&copy; 2026 Newlead Global SDN BHD. All rights reserved.</p>
+        <p class="small mb-2 mb-md-0">&copy; 2026 Shanghai Welly International Trading Ltd.. All rights reserved.</p>
         <p class="small mb-0">Leaders in Mechanical &amp; Electrical Equipment</p>
       </div>
     </div>

@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'Contact | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
+@section('title', 'Contact | ' . Helper::getSettings('application_name') ?? 'Shanghai Welly International Trading Ltd ')
 @section('content')
     <main id="blog_page">
         <div class="page-banner overlay">
@@ -17,7 +17,7 @@
                                     Contact us
                                 </h3>
                                 <div class="about_main_paragraph" data-aos="fade-up" data-aos-delay="200">
-                                    Short description introducing Livenza Group: “Uniting clean energy, EV mobility,
+                                    Short description introducing Shanghai Welly International Trading Ltd : “Uniting clean energy, EV mobility,
                                     sustainable manufacturing, and industrial retail for multi-sector growth.”
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                                     Contact Us
                                 </h4>
                                 <p class="text text-18" data-aos="fade-up">
-                                    Feel free to contact us. Livenza Group is a collective entity of sustainability-driven
+                                    Feel free to contact us. Shanghai Welly International Trading Ltd  is a collective entity of sustainability-driven
                                     companies united under one ecosystem, dedicated to helping grow responsibly across
                                     multiple sectors.
                                 </p>
@@ -64,8 +64,7 @@
                                             Phone
                                         </h5>
                                         <p class="text text-14 m-0" data-aos="fade-up">
-                                            09639272106
-                                            <!-- , <br>   +880 1521 747410 -->
+                                            {{ Helper::getSettings('application_phone') }}
                                         </p>
                                     </div>
                                 </div>
@@ -88,7 +87,7 @@
                                             Email
                                         </h2>
                                         <p class="text text-14 m-0" data-aos="fade-up">
-                                            info@livenzagroup.com
+                                            {{ Helper::getSettings('application_email') }}
                                         </p>
                                     </div>
                                 </div>
@@ -101,20 +100,18 @@
 
                                 <div class="card-icon-text card-icon-text-horizontal">
                                     <div class="svg-wrapper" data-aos="fade-up">
-                                        <img src="/frontend/assets/img/bd.png" alt="">
+                                        <img src="/frontend/assets/img/china.png" alt="">
                                     </div>
                                     <div class="content">
                                         <h5 class="heading text-16 fw-600 m-0" data-aos="fade-up">
-                                            Bangladesh
+                                            China
                                         </h5>
                                         <p class="text text-14 m-0" data-aos="fade-up">
-                                            Plot 24 & 26 (Canyon Tower)
-                                            Sonargaon Janapath, Sector # 12, Uttara,
-                                            Dhaka-1230, Bangladesh
+                                            Chengjiaqiao Residential District, Changning District, Shanghai, China
                                         </p>
                                     </div>
                                 </div>
-                                <div class="card-icon-text card-icon-text-horizontal">
+                                <!-- <div class="card-icon-text card-icon-text-horizontal">
                                     <div class="svg-wrapper" data-aos="fade-up">
                                         <img src="/frontend/assets/img/hongkong.png" alt="">
                                     </div>
@@ -139,7 +136,9 @@
                                             1467 West 57th Avenue, Vancouver, British Columbia, V6P 1T1, Canada
                                         </p>
                                     </div>
-                                </div>
+                                </div> -->
+
+
                             </div>
                         </div>
                         <div class="col-12 col-lg-6 col-contact-form">
@@ -233,10 +232,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116749.79314502819!2d90.23745534335937!3d23.8743295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5003422f655%3A0xde3d4394732dca14!2sCANYON%20TOWER!5e0!3m2!1sen!2sbd!4v1764529453388!5m2!1sen!2sbd"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27303.522415410433!2d121.34799930635009!3d31.1946685702027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35b26433ccb89b0b%3A0xcb236fddbcfa3fe2!2sChengjiaqiao%20Residential%20District%2C%20Changning%20District%2C%20Shanghai%2C%20China%2C%20200336!5e0!3m2!1sen!2sbd!4v1788660344317!5m2!1sen!2sbd" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
                     </div>
                 </div>
             </div>

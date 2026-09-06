@@ -28,3 +28,8 @@
     padding: 3px;
     border-radius: 50%;
 }
+
+.backend_favicon img, .backend_logo img{
+    width: 100px;
+    height: auto;
+}

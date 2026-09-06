@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'Company | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
+@section('title', 'Company | ' . Helper::getSettings('application_name') ?? 'Shanghai Welly International Trading Ltd ')
 @section('content')
     <main id="companysingle_page">
         <!-- Page Banner -->

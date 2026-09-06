@@ -6,38 +6,18 @@ $(function () {
   'use strict';
 
   // ---------- Solutions data ----------
-  const solutions = [
-    { title: 'Ball Bearings', icon: 'bi-circle' },
-    { title: 'Packaging Materials', icon: 'bi-box-seam' },
-    { title: 'Handheld Tools', icon: 'bi-tools' },
-    { title: 'Metal Working Tools', icon: 'bi-gear' },
-    { title: 'Industrial Parts', icon: 'bi-cpu' },
-    { title: 'Measurement Tools', icon: 'bi-rulers' },
-    { title: 'Material Handling', icon: 'bi-truck' },
-    { title: 'Personal Safety Equipment', icon: 'bi-shield-check' },
-    { title: 'Cleaning Supplies & Chemicals', icon: 'bi-droplet' },
-    { title: 'Lighting & Ventilation', icon: 'bi-lightbulb' },
-    { title: 'Cutting Tools', icon: 'bi-scissors' },
-    { title: 'Electrical Switches', icon: 'bi-toggle-on' },
-    { title: 'Rivet & Combination Screw', icon: 'bi-nut' },
-    { title: 'Tape Supplies', icon: 'bi-tape' },
-    { title: 'Stretch Film', icon: 'bi-layers' },
-    { title: 'Grinding & Abrasive Tools', icon: 'bi-disc' },
-    { title: 'Welding & Soldering Tools', icon: 'bi-fire' },
-    { title: 'Pneumatic Tools', icon: 'bi-wind' },
-    { title: '3C Manual Fixture', icon: 'bi-phone' },
-    { title: '3C Pneumatic Fixtures', icon: 'bi-phone-vibrate' },
-    { title: 'Welding Carriers', icon: 'bi-box' },
-    { title: 'High-Precision Fixtures', icon: 'bi-precision' },
-    { title: 'MTF Testing System', icon: 'bi-graph-up' },
-    { title: 'Active Alignment (AA) Assembly Equipment', icon: 'bi-bullseye' },
-    { title: 'Mobile AAA Assembly Equipment', icon: 'bi-phone' },
-    { title: 'iPhone HDP/CDP Dispenser Machine', icon: 'bi-phone' },
-    { title: 'iPhone Battery Cell Assembly Line', icon: 'bi-battery-charging' },
-    { title: 'Automotive Component Assembly Line', icon: 'bi-car-front' },
-    { title: 'Complex Shape Dispenser Machine', icon: 'bi-droplet-half' },
-    { title: 'Vacuum Potting Machine', icon: 'bi-moisture' }
-  ];
+const solutions = [
+  { title: 'Truck Parts', icon: 'bi-truck' },
+  { title: 'Industrial Heavy Equipment', icon: 'bi-gear-wide-connected' },
+  { title: 'Commercial Vehicles', icon: 'bi-bus-front' },
+  { title: 'Renewable Energy Solutions', icon: 'bi-sun' },
+  { title: 'Lithium Battery', icon: 'bi-battery-charging' },
+  { title: 'China Business Travel Services', icon: 'bi-airplane' },
+  { title: 'Consulting Services', icon: 'bi-briefcase' },
+  { title: 'Textile & Garment', icon: 'bi-scissors' },
+  { title: 'Plastic Raw Materials', icon: 'bi-box-seam' },
+  { title: 'Gold Jewelry', icon: 'bi-gem' }
+];
 
   // Render solutions grid
   const $grid = $('#solutionsGrid');

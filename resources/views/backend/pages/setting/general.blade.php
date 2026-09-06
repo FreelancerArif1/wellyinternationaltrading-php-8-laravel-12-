@@ -19,7 +19,7 @@
                     enctype="multipart/form-data">
                     @csrf
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Application Name:</label>
+                        <label for="" class="col-sm-3 col-form-label">Application Name</label>
                         <div class="col-sm-9">
                             <input type="text" name="application_name"
                                 value="{{ Helper::getSettings('application_name') }}" class="form-control"
@@ -27,18 +27,27 @@
                         </div>
                     </div>
                     <div class="form-group  row">
-                        <label for="" class="col-sm-3 col-form-label">Site Logo:</label>
-                        <div class="col-sm-9">
+                        <label for="" class="col-sm-3 col-form-label">Site Logo</label>
+                        <div class="col-sm-9 backend_logo">
                             <input type="file" class="form-control"
                                 onchange="previewFile('settingForm #site_logo', 'settingForm .site_logo_image')"
                                 name="site_logo" id="site_logo">
                             <img src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : asset('assets/img/no-img.jpg') }}"
-                                height="80px" width="100px" class="site_logo_image mt-1 border" alt="">
+                                class="site_logo_image mt-1 border" alt="">
                         </div>
                     </div>
-
+                    <div class="form-group  row">
+                        <label for="" class="col-sm-3 col-form-label">Favicon</label>
+                        <div class="col-sm-9 backend_favicon">
+                            <input type="file" class="form-control"
+                                onchange="previewFile('settingForm #favicon', 'settingForm .favicon_image')"
+                                name="favicon" id="favicon">
+                            <img src="{{ Helper::getSettings('favicon') ? asset(Helper::getSettings('favicon')) : asset('assets/img/no-img.jpg') }}"
+                                 class="favicon_image mt-1 border" alt="">
+                        </div>
+                    </div>
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Phone:</label>
+                        <label for="" class="col-sm-3 col-form-label">Phone</label>
                         <div class="col-sm-9">
                             <input type="text" name="application_phone"
                                 value="{{ Helper::getSettings('application_phone') }}" class="form-control"
@@ -46,7 +55,7 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Email:</label>
+                        <label for="" class="col-sm-3 col-form-label">Email</label>
                         <div class="col-sm-9">
                             <input type="text" name="application_email"
                                 value="{{ Helper::getSettings('application_email') }}" class="form-control"
@@ -55,7 +64,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Address:</label>
+                        <label for="" class="col-sm-3 col-form-label">Address</label>
                         <div class="col-sm-9">
                             <input type="text" name="application_address"
                                 value="{{ Helper::getSettings('application_address') }}" class="form-control"
@@ -64,7 +73,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Facebook (Link):</label>
+                        <label for="" class="col-sm-3 col-form-label">Facebook (Link)</label>
                         <div class="col-sm-9">
                             <input type="text" name="facebook_link" value="{{ Helper::getSettings('facebook_link') }}"
                                 class="form-control" placeholder="Facebook link">
@@ -72,7 +81,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Twitter (Link):</label>
+                        <label for="" class="col-sm-3 col-form-label">Twitter (Link)</label>
                         <div class="col-sm-9">
                             <input type="text" name="twitter_link" value="{{ Helper::getSettings('twitter_link') }}"
                                 class="form-control" placeholder="Twitter link">
@@ -80,7 +89,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Instagram (Link):</label>
+                        <label for="" class="col-sm-3 col-form-label">Instagram (Link)</label>
                         <div class="col-sm-9">
                             <input type="text" name="instagram_link" value="{{ Helper::getSettings('instagram_link') }}"
                                 class="form-control" placeholder="Instagram link">
@@ -88,7 +97,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Linkedin (Link):</label>
+                        <label for="" class="col-sm-3 col-form-label">Linkedin (Link)</label>
                         <div class="col-sm-9">
                             <input type="text" name="linkedin_link" value="{{ Helper::getSettings('linkedin_link') }}"
                                 class="form-control" placeholder="Linkedin link">
@@ -96,7 +105,7 @@
                     </div>
 
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Youtube (Link):</label>
+                        <label for="" class="col-sm-3 col-form-label">Youtube (Link)</label>
                         <div class="col-sm-9">
                             <input type="text" name="youtube_link" value="{{ Helper::getSettings('youtube_link') }}"
                                 class="form-control" placeholder="Youtube link">
@@ -113,14 +122,14 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">About Us:</label>
+                        <label for="" class="col-sm-3 col-form-label">About Us</label>
                         <div class="col-sm-9">
                             <textarea type="text" name="application_toll_free" value="{{ Helper::getSettings('application_toll_free') }}"
                                 class="form-control" placeholder="Description" cols="30" rows="5">{{ Helper::getSettings('application_toll_free') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="" class="col-sm-3 col-form-label">Keywords:</label>
+                        <label for="" class="col-sm-3 col-form-label">Keywords</label>
                         <div class="col-sm-9">
                             <input type="text" name="application_fax"
                                 value="{{ Helper::getSettings('application_fax') }}" class="form-control"

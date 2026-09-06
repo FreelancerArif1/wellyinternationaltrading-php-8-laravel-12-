@@ -21,14 +21,14 @@ h1, h2, h3, .display-2, .display-4, .display-5 {
 
 /* Navbar */
 .navbar {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
+    padding-top: 0;
+    padding-bottom: 0;
   box-shadow: 0 4px 20px rgba(0,0,0,0.08) !important;
 }
 
@@ -386,6 +386,7 @@ html {
   background-color: #0a1630; /* fallback */
   color: #fff;
   position: relative;
+      border-top: 1px solid #ffffff1c;
 }
 
 /* Optional: soft dark overlay so text stays readable */
@@ -485,4 +486,114 @@ html {
   .bg-welly2 {
     background-attachment: scroll;       /* better performance & no lag on phones */
   }
+}
+
+
+.bg-danger {
+    --bs-bg-opacity: 1;
+    background-color:#dc9200 !important;
+}
+
+
+
+
+
+
+
+
+
+
+/* Custom Dropdown Box */
+.top-pointer-dropdown {
+  position: relative;
+  margin-top: 12px; /* Space for the top arrow */
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px 0;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  overflow: visible !important; /* Ensures the top arrow isn't clipped */
+}
+
+/* Top Pointer/Arrow Design using ::before */
+.top-pointer-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -8px; /* Position above the dropdown menu */
+  left: 20px; /* Distance from the left edge */
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #ffffff; /* Pointer fill color */
+  filter: drop-shadow(0 -2px 1px rgba(0, 0, 0, 0.05)); /* Subtle shadow matching border */
+  transition: transform 0.2s ease;
+}
+
+/* Desktop Hover & Fade-in Animation */
+@media (min-width: 992px) {
+  .hover-dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .hover-dropdown .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(6px);
+    transition: all 0.25s ease-in-out;
+  }
+
+  /* Optional: Slight lift effect on the top pointer on hover */
+  .hover-dropdown:hover .top-pointer-dropdown::before {
+    transform: translateY(-1px);
+  }
+}
+
+/* Dropdown Menu Item Styling */
+.top-pointer-dropdown .dropdown-item {
+  color: #334155;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.top-pointer-dropdown .dropdown-item:hover {
+  background-color: #f1f5f9;
+  color: #333;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: var(--bs-dropdown-link-hover-color);
+  background-color: #dc92002b;
+}
+.btn-danger:hover, .btn-danger:focus {
+  background-color: #dc9200;
+  border-color: #dc9200;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  position: absolute;
+  top: 53px;
+  border-radius: 0 0 5px 5px;
+  left: 15px;
+  padding: 0;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  background-color: #dc9200;
+      color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu  li{
+  margin-bottom: 5px;
+}
+.dropdown-item {
+    font-size: 15px;
+}
+.my-4 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }

@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'Home | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
+@section('title', 'Home | ' . Helper::getSettings('application_name') ?? 'Shanghai Welly International Trading Ltd ')
 @section('content')
 <main id="homepage" style="background-image: url(/frontend/assets/img/footer/footer-bg-larged.jpg)">
 
@@ -360,7 +360,7 @@
       <p class="lead mb-4 col-lg-6 mx-auto opacity-90">
         Ready to improve your production line? Reach out for a consultation or request a quote today.
       </p>
-      <a href="mailto:sales@sz-newlead.com" class="btn btn-light btn-lg px-5 me-2 mb-2">Email Us</a>
+      <a href="mailto: wellytradingltd3@gmail.com" class="btn btn-light btn-lg px-5 me-2 mb-2">Email Us</a>
       <a href="#contact-form" class="btn btn-outline-light btn-lg px-5 mb-2" data-bs-toggle="collapse" data-bs-target="#contactForm">Send Message</a>
       
       <div class="collapse mt-5" id="contactForm">

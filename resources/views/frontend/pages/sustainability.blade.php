@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'Sustainability | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
+@section('title', 'Sustainability | ' . Helper::getSettings('application_name') ?? 'Shanghai Welly International Trading Ltd ')
 @section('content')
     <style>
         .section-padding {

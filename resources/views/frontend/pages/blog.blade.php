@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'News | ' . Helper::getSettings('application_name') ?? 'Livenza Group')
+@section('title', 'News | ' . Helper::getSettings('application_name') ?? 'Shanghai Welly International Trading Ltd ')
 @section('content')
     <main id="blog_page">
         <div class="page-banner overlay">
@@ -17,7 +17,7 @@
                                     News
                                 </h3>
                                 <div class="about_main_paragraph" data-aos="fade-up" data-aos-delay="200">
-                                    Short description introducing Livenza Group: “Uniting clean energy, EV mobility,
+                                    Short description introducing Shanghai Welly International Trading Ltd : “Uniting clean energy, EV mobility,
                                     sustainable manufacturing, and industrial retail for multi-sector growth.”
                                 </div>
                             </div>

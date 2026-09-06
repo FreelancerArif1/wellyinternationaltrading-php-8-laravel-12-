@@ -197,7 +197,7 @@
         @hasSection('title')
             @yield('title')
         @else
-            {{ Helper::getSettings('application_name') ? Helper::getSettings('application_name') : 'Livenza Group' }}
+            {{ Helper::getSettings('application_name') ? Helper::getSettings('application_name') : 'Shanghai Welly International Trading Ltd ' }}
         @endif
     </title>
 </head>
