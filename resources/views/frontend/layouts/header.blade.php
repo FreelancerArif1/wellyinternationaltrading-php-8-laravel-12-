@@ -24,16 +24,13 @@
               OUR SERVICES
             </a>
             <ul class="dropdown-menu top-pointer-dropdown" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="#truck-parts">Truck parts</a></li>
-              <li><a class="dropdown-item" href="#industrial-heavy-equipment">Industrial heavy equipment</a></li>
-              <li><a class="dropdown-item" href="#commercial-vehicles">Commercial vehicles</a></li>
-              <li><a class="dropdown-item" href="#renewable-energy-solutions">Renewable Energy Solutions</a></li>
-              <li><a class="dropdown-item" href="#lithium-battery">Lithium Battery</a></li>
-              <li><a class="dropdown-item" href="#china-business-travel-services">China Business Travel Services</a></li>
-              <li><a class="dropdown-item" href="#consulting-services">Consulting Services</a></li>
-              <li><a class="dropdown-item" href="#textile-garment">Textile & Garment</a></li>
-              <li><a class="dropdown-item" href="#plastic-raw-materials">Plastic Raw Materials</a></li>
-              <li><a class="dropdown-item" href="#gold-jewelry">Gold Jewelry</a></li>
+              
+            
+              @foreach($services as $service)
+              <li><a class="dropdown-item" href="/service/{{ $service->slug }}">{{ $service->title }}</a></li>
+              @endforeach
+              
+              
             </ul>
           </li>
 
