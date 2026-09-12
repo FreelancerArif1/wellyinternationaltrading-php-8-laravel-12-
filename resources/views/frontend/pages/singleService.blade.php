@@ -108,7 +108,7 @@
                                     <h2 class="sidebar-heading heading text-24">Recent Post</h2>
                                     <ul class="recent-post list-unstyled">
                                 
-                                        <div class="row g-4" id="solutionsGrid">            
+                                        <div class="row g-4" id="solutionsGrid2">            
                                             @foreach($services as $service)
                                             <div class="col-12 col-md-6 service_single">
                                                 <a href="/service/{{ $service->slug }}">
