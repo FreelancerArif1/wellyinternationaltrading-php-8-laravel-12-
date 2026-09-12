@@ -63,7 +63,7 @@
         </p>
       </div>
 
-      <div class="row g-4" id="solutionsGrid">
+      <div class="row g-4" id="solutionsGrid2">
               
       @foreach($services as $service)
       <div class="col-6 col-md-4 col-lg-4 col-xl-2 service_single">
