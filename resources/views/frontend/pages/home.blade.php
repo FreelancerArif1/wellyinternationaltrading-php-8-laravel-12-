@@ -64,11 +64,31 @@
       </div>
 
       <div class="row g-4" id="solutionsGrid">
-        <!-- Items injected by JS -->
+              
+      @foreach($services as $service)
+      <div class="col-6 col-md-4 col-lg-4 col-xl-2 service_single">
+       
+      <a href="/service/{{ $service->slug }}">
+        <div class="solution-item">
+          <div class="icon-wrap">
+           {!! $service->icon !!}
+          </div>
+          <h6>{{ $service->title }}</h6>
+        </div>
+        </a>
+
+
+      </div>
+      @endforeach
+
+
       </div>
     </div>
   </section>
 
+
+
+  
 
 
   <!-- ========== INTEGRATED SOLUTIONS / STATS ========== -->
@@ -133,11 +153,11 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="our-team">
                         <div class="pic">
-                            <img src="https://i.ibb.co/8x9xK4H/team.jpg">
+                            <img src="/uploads/team/KageiHua.png">
                         </div>
                         <div class="team-content">
-                            <h3 class="title">Team 1</h3>
-                            <span class="post">Inhaber & Geschäftsführer</span>
+                            <h3 class="title">Kagei Hua</h3>
+                            <span class="post">Chairman</span>
                         </div>
                         <ul class="social">
                             <li>
@@ -160,11 +180,11 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="our-team">
                         <div class="pic">
-                            <img src="https://i.ibb.co/8x9xK4H/team.jpg">
+                            <img src="/uploads/team/ChrisWang.png">
                         </div>
                         <div class="team-content">
-                            <h3 class="title">Team 2</h3>
-                            <span class="post">Stellvertretender  Geschäftsführer</span>
+                            <h3 class="title">Chris Wang</h3>
+                            <span class="post">Chief Executive Officer (CEO)</span>
                         </div>
                         <ul class="social">
                             <li>
@@ -185,11 +205,11 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="our-team">
                         <div class="pic">
-                            <img src="https://i.ibb.co/8x9xK4H/team.jpg">
+                            <img src="/uploads/team/VincentLiu.png">
                         </div>
                         <div class="team-content">
-                            <h3 class="title">Team 3</h3>
-                            <span class="post">Dipl. Physiotherapeut </span>
+                            <h3 class="title">Vincent Liu</h3>
+                            <span class="post">Chief Operational Officer (COO) </span>
                         </div>
                         <ul class="social">
                             <li>
@@ -211,11 +231,11 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="our-team">
                         <div class="pic">
-                            <img src="https://i.ibb.co/8x9xK4H/team.jpg">
+                            <img src="/uploads/team/RosaHua.png">
                         </div>
                         <div class="team-content">
-                            <h3 class="title">Team 4</h3>
-                            <span class="post">Dipl. Physiotherapeut </span>
+                            <h3 class="title">Rosa Hua</h3>
+                            <span class="post">Executive Consultant (EC) </span>
                         </div>
                         <ul class="social">
                             <li>

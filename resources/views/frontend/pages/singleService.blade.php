@@ -14,11 +14,10 @@
                             <div class="left_side_about">
 
                                 <h3 class="heading text-40 fw-700 text-uppercase mb-4" data-aos="fade-up">
-                                    News
+                                    Service
                                 </h3>
                                 <div class="about_main_paragraph" data-aos="fade-up" data-aos-delay="200">
-                                    Short description introducing Shanghai Welly International Trading Ltd : “Uniting clean energy, EV mobility,
-                                    sustainable manufacturing, and industrial retail for multi-sector growth.”
+                                    {{ $single->title }}
                                 </div>
                             </div>
                         </div>
@@ -108,35 +107,22 @@
                                 <div class="sidebar-widget radius18" data-aos="fade-up">
                                     <h2 class="sidebar-heading heading text-24">Recent Post</h2>
                                     <ul class="recent-post list-unstyled">
-                                        @if ($news)
-                                            @foreach ($news as $item)
-                                                <li>
-                                                    <div class="card-blog-list">
-                                                        <div class="card-blog-list-media">
-                                                            <div class="media">
-                                                                <img src="{{ $item->image }}" alt="blog image"
-                                                                    width="1000" height="707" loading="lazy">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="card-blog-content">
-                                                            <div class="card-blog-meta">
-                                                                <div class="card-blog-meta-item text text-12">
-                                                                    {{ \Carbon\Carbon::parse($item->updated_at)->format('F j, Y') }}
-                                                                </div>
-                                                            </div>
-
-                                                            <h5 class="card-blog-heading heading text-15">
-                                                                <a href="/news/{{ $item->slug }}"
-                                                                    class="heading text-15">
-                                                                    {{ $item->title }}
-                                                                </a>
-                                                            </h5>
-                                                        </div>
+                                
+                                        <div class="row g-4" id="solutionsGrid">            
+                                            @foreach($services as $service)
+                                            <div class="col-12 col-md-6 service_single">
+                                                <a href="/service/{{ $service->slug }}">
+                                                    <div class="solution-item">
+                                                    <div class="icon-wrap">
+                                                    {!! $service->icon !!}
                                                     </div>
-                                                </li>
+                                                    <h6>{{ $service->title }}</h6>
+                                                    </div>
+                                                </a>
+                                            </div>
                                             @endforeach
-                                        @endif
+                                        </div>
+                                        
                                     </ul>
                                 </div>
                             </aside>

@@ -254,6 +254,74 @@
                 @endif
 
 
+
+
+                @if (Helper::hasRight('setting.view'))
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#gallery"
+                            aria-expanded="@if (Route::is('gallery.index')) true @else false @endif">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p class="ms-4">{{ trans('Gallery') }}</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse @if (Route::is('gallery.index') || Route::is('gallerycategory.index')) show @endif" id="gallery">
+                            <ul class="nav nav-collapse">
+                                @if (Helper::hasRight('gallery.view'))
+                                    <li class="{{ Route::is('gallery.index') ? 'active' : '' }}">
+                                        <a href="{{ route('gallery.index') }}">
+                                            <span class="sub-item">{{ trans('All') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                                @if (Helper::hasRight('gallerycategory.view'))
+                                    <li class="{{ Route::is('gallerycategory.index') ? 'active' : '' }}">
+                                        <a href="{{ route('gallerycategory.index') }}">
+                                            <span class="sub-item">{{ trans('Category') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                            </ul>
+                        </div>
+                    </li>
+                @endif
+
+
+
+                @if (Helper::hasRight('service.view'))
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#service"
+                            aria-expanded="@if (Route::is('service.index')) true @else false @endif">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p class="ms-4">{{ trans('Services') }}</p>
+                            <span class="caret"></span>
+                        </a>
+                        <div class="collapse @if (Route::is('service.index') || Route::is('servicecategory.index')) show @endif" id="service">
+                            <ul class="nav nav-collapse">
+                                @if (Helper::hasRight('role.view'))
+                                    <li class="{{ Route::is('service.index') ? 'active' : '' }}">
+                                        <a href="{{ route('service.index') }}">
+                                            <span class="sub-item">{{ trans('Service') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                                @if (Helper::hasRight('servicecategory.view'))
+                                    <li class="{{ Route::is('servicecategory.index') ? 'active' : '' }}">
+                                        <a href="{{ route('servicecategory.index') }}">
+                                            <span class="sub-item">{{ trans('Service Category') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+                            </ul>
+                        </div>
+                    </li>
+                @endif
+
+
+
+
                 @if (Helper::hasRight('dashboard.view'))
                     <li class="nav-item {{ Route::is('careerapply.index') ? 'active' : '' }}">
                         <a href="{{ route('careerapply.index') }}">

@@ -17,6 +17,11 @@ use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\ServiceController;
+use App\Http\Controllers\Backend\ServicecategoryController;
+use App\Http\Controllers\Backend\GalleryController;
+use App\Http\Controllers\Backend\GallerycategoryController;
+
 use App\Http\Controllers\Backend\SustainabilityController;
 use App\Http\Controllers\Backend\CareerpageController;
 use App\Http\Controllers\Backend\JobAppliedController;
@@ -113,8 +118,26 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
 
     Route::resource('partner', PartnerController::class);
     Route::get('/partner-list', [PartnerController::class, 'list'])->name('admin.partner.list');
+
+
+    Route::resource('gallery', GalleryController::class);
+    Route::get('/gallery-list', [GalleryController::class, 'list'])->name('admin.gallery.list');
+    Route::resource('gallerycategory', GallerycategoryController::class);
+    Route::get('/gallerycategory-list', [GallerycategoryController::class, 'list'])->name('admin.gallerycategory.list');
+    
+
+
+    Route::resource('service', ServiceController::class);
+    Route::get('/service-list', [ServiceController::class, 'list'])->name('admin.service.list');
+    Route::resource('servicecategory', ServicecategoryController::class);
+    Route::get('/servicecategory-list', [ServicecategoryController::class, 'list'])->name('admin.servicecategory.list');
+
+
     Route::resource('blog', BlogController::class);
     Route::get('/blog-list', [BlogController::class, 'list'])->name('admin.blog.list');
+    Route::resource('blogcategory', BlogcategoryController::class);
+    Route::get('/blogcategory-list', [BlogcategoryController::class, 'list'])->name('admin.blogcategory.list');
+    
     Route::post('/empty-a-table-column',  [SustainabilityController::class, 'emptyATableColumn']);
     Route::resource('sustainability', SustainabilityController::class);
     Route::get('/sustainability-list', [SustainabilityController::class, 'list'])->name('admin.sustainability.list');
@@ -141,3 +164,5 @@ Route::get('/companies', [FrontendController::class, 'companies'])->name('compan
 Route::get('/careers', [FrontendController::class, 'careers'])->name('careers');
 Route::get('/careers/{slug}', [FrontendController::class, 'careerSingle'])->name('career.single');
 Route::post('/career-submit', [FrontendController::class, 'careerSubmit'])->name('career.submit');
+
+Route::get('/service/{slug}', [FrontendController::class, 'singleService'])->name('single.service');

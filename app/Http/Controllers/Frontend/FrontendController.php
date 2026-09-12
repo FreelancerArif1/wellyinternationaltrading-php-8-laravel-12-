@@ -26,6 +26,8 @@ use App\Models\JobApplied;
 use App\Models\LeadingAndGovernor;
 use App\Models\Gallerycategory;
 use App\Models\Gallery;
+use App\Models\Service;
+
 use Intervention\Image\Laravel\Facades\Image;
 use Illuminate\Support\Str;
 
@@ -37,8 +39,18 @@ class FrontendController extends Controller
         $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
         $categories = Gallerycategory::where('status', 1)->orderBy('serial', 'asc')->get();
         $images = Gallery::where('status', 1)->orderBy('serial', 'asc')->get();
-        return view('frontend.pages.home', compact('companies', 'categories', 'images',));
+        $services = Service::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('frontend.pages.home', compact('companies', 'categories', 'images','services'));
     }
+
+    public function singleService($slug)
+    {
+        $services = Service::where('status', 1)->orderBy('serial', 'asc')->get();
+        $single = Service::where('slug', $slug)->first();
+        return view('frontend.pages.singleService', compact('single','services'));
+    }
+
+    
     public function about()
     {
         $about = About::where('id', 1)->first();

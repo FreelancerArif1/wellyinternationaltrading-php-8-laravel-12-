@@ -6,34 +6,34 @@ $(function () {
   'use strict';
 
   // ---------- Solutions data ----------
-const solutions = [
-  { title: 'Truck Parts', icon: 'bi-truck' },
-  { title: 'Industrial Heavy Equipment', icon: 'bi-gear-wide-connected' },
-  { title: 'Commercial Vehicles', icon: 'bi-bus-front' },
-  { title: 'Renewable Energy Solutions', icon: 'bi-sun' },
-  { title: 'Lithium Battery', icon: 'bi-battery-charging' },
-  { title: 'China Business Travel Services', icon: 'bi-airplane' },
-  { title: 'Consulting Services', icon: 'bi-briefcase' },
-  { title: 'Textile & Garment', icon: 'bi-scissors' },
-  { title: 'Plastic Raw Materials', icon: 'bi-box-seam' },
-  { title: 'Gold Jewelry', icon: 'bi-gem' }
-];
+// const solutions = [
+//   { title: 'Truck Parts', icon: '' },
+//   { title: 'Industrial Heavy Equipment', icon: 'bi-gear-wide-connected' },
+//   { title: 'Commercial Vehicles', icon: 'bi-bus-front' },
+//   { title: 'Renewable Energy Solutions', icon: 'bi-sun' },
+//   { title: 'Lithium Battery', icon: 'bi-battery-charging' },
+//   { title: 'China Business Travel Services', icon: 'bi-airplane' },
+//   { title: 'Consulting Services', icon: 'bi-briefcase' },
+//   { title: 'Textile & Garment', icon: 'bi-scissors' },
+//   { title: 'Plastic Raw Materials', icon: 'bi-box-seam' },
+//   { title: 'Gold Jewelry', icon: 'bi-gem' }
+// ];
 
-  // Render solutions grid
-  const $grid = $('#solutionsGrid');
-  solutions.forEach(function (item) {
-    const html = `
-      <div class="col-6 col-md-4 col-lg-3 col-xl-2">
-        <div class="solution-item">
-          <div class="icon-wrap">
-            <i class="bi ${item.icon}"></i>
-          </div>
-          <h6>${item.title}</h6>
-        </div>
-      </div>
-    `;
-    $grid.append(html);
-  });
+//   // Render solutions grid
+//   const $grid = $('#solutionsGrid');
+//   solutions.forEach(function (item) {
+//     const html = `
+//       <div class="col-6 col-md-4 col-lg-3 col-xl-2">
+//         <div class="solution-item">
+//           <div class="icon-wrap">
+//             <i class="bi ${item.icon}"></i>
+//           </div>
+//           <h6>${item.title}</h6>
+//         </div>
+//       </div>
+//     `;
+//     $grid.append(html);
+//   });
 
   // ---------- Sticky navbar shadow ----------
   const $navbar = $('.navbar');
