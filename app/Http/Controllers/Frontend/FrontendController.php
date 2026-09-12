@@ -24,7 +24,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use App\Models\JobApplied;
 use App\Models\LeadingAndGovernor;
-
+use App\Models\Gallerycategory;
+use App\Models\Gallery;
 use Intervention\Image\Laravel\Facades\Image;
 use Illuminate\Support\Str;
 
@@ -34,7 +35,9 @@ class FrontendController extends Controller
     public function home()
     {
         $companies = Company::where('status', 1)->orderBy('serial', 'asc')->get();
-        return view('frontend.pages.home', compact('companies'));
+        $categories = Gallerycategory::where('status', 1)->orderBy('serial', 'asc')->get();
+        $images = Gallery::where('status', 1)->orderBy('serial', 'asc')->get();
+        return view('frontend.pages.home', compact('companies', 'categories', 'images',));
     }
     public function about()
     {

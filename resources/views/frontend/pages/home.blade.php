@@ -12,26 +12,45 @@
       <div class="row align-items-center min-vh-75">
         <div class="col-lg-8">
           <h1 class="hero-title display-2 fw-bold mb-3">
-            <span class="text-dark">Single Screw</span><br>
-            <span class="text-danger">to Turnkey Solutions</span>
+            <span class="text-dark">At welly trading</span><br>
+            <span class="text-danger">Every trade will be <br>  welly done</span>
           </h1>
           <p class="hero-subtitle lead text-muted mb-4 col-lg-10">
-            Integrated MRO procurement, fixtures &amp; jigs, dispensing equipment, and industrial tools —serving SMT, 3C, automotive electronics, medical, home appliances &amp; semiconductors.
+            Shanghai Welly International Trading Ltd. is an international sourcing and trading company.
           </p>
           <div class="d-flex flex-wrap gap-3">
             <a href="#services" class="btn btn-danger btn-lg px-4">Explore Solutions</a>
-            <a href="#contact" class="btn btn-outline-dark btn-lg px-4">Contact Us</a>
+            <a href="/contact-us" class="btn btn-outline-dark btn-lg px-4">Contact Us</a>
           </div>
         </div>
       </div>
     </div>
     <div class="hero-social d-none d-lg-flex">
-      <a href="#" class="text-muted me-3">Facebook</a>
-      <a href="#" class="text-muted me-3">Twitter</a>
-      <a href="#" class="text-muted me-3">Dribbble</a>
-      <a href="#" class="text-muted">Instagram</a>
+      <div class="social_bar">
+        <a href="{{ Helper::getSettings('facebook_link') ?: '#' }}" class="text-muted me-3"> <i class="fa fa-facebook" aria-hidden="true"></i></i> Facebook</a>
+        <a href="{{ Helper::getSettings('linkedin_link') ?: '#' }}" class="text-muted me-3"> <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin </a>
+        <a href="{{ Helper::getSettings('twitter_link') ?: '#' }}" class="text-muted me-3"> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</a>
+        <a href="{{ Helper::getSettings('youtube_link') ?: '#' }}" class="text-muted me-3"> <i class="fa fa-youtube-play" aria-hidden="true"></i> Youtube</a>
+      </div>
     </div>
   </section>
+
+
+
+
+    <!-- ========== Company Introduction ========== -->
+  <section id="introduction" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Introduction</p>
+        <h2 class="display-5 fw-bold mb-3">Explore our <br> Company Introduction</h2>
+        <p class="text-muted col-lg-10 mx-auto company_introduction">
+        {{ Helper::getSettings('application_toll_free') ?: '#' }}</p>
+      </div>
+    </div>
+  </section>
+
+
 
   <!-- ========== CORE SOLUTIONS ========== -->
   <section id="services" class="py-5 bg-light">
@@ -50,91 +69,7 @@
     </div>
   </section>
 
-  <!-- ========== PRODUCTS CATALOGUE ========== -->
-  <section class="py-5">
-    <div class="container py-4">
-      <div class="text-center mb-5">
-        <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">our catalogue</p>
-        <h2 class="display-5 fw-bold mb-3">Products<br>We Have</h2>
-        <p class="text-muted col-lg-8 mx-auto">
-          Every product we deliver is backed by engineering precision, global sourcing expertise, and on-site support—ensuring consistency from concept to completion.
-        </p>
-      </div>
 
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <a href="#" class="product-card card h-100 border-0 shadow-sm text-decoration-none">
-            <div class="card-body p-4 d-flex justify-content-between align-items-start">
-              <div>
-                <h5 class="card-title text-dark fw-bold mb-1">Dispensing Equipment &amp; Accessories</h5>
-              </div>
-              <span class="badge bg-danger rounded-pill">01</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#" class="product-card card h-100 border-0 shadow-sm text-decoration-none">
-            <div class="card-body p-4 d-flex justify-content-between align-items-start">
-              <div>
-                <h5 class="card-title text-dark fw-bold mb-1">Engineering Fixtures &amp; Jigs</h5>
-              </div>
-              <span class="badge bg-danger rounded-pill">02</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#" class="product-card card h-100 border-0 shadow-sm text-decoration-none">
-            <div class="card-body p-4 d-flex justify-content-between align-items-start">
-              <div>
-                <h5 class="card-title text-dark fw-bold mb-1">Non-Standard Mechanical Components</h5>
-              </div>
-              <span class="badge bg-danger rounded-pill">03</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#" class="product-card card h-100 border-0 shadow-sm text-decoration-none">
-            <div class="card-body p-4 d-flex justify-content-between align-items-start">
-              <div>
-                <h5 class="card-title text-dark fw-bold mb-1">MRO (Maintenance, Repair &amp; Operations) Products</h5>
-              </div>
-              <span class="badge bg-danger rounded-pill">04</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#" class="product-card card h-100 border-0 shadow-sm text-decoration-none">
-            <div class="card-body p-4 d-flex justify-content-between align-items-start">
-              <div>
-                <h5 class="card-title text-dark fw-bold mb-1">Peripheral and Auxiliary Equipment</h5>
-              </div>
-              <span class="badge bg-danger rounded-pill">05</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#" class="product-card card h-100 border-0 shadow-sm text-decoration-none">
-            <div class="card-body p-4 d-flex justify-content-between align-items-start">
-              <div>
-                <h5 class="card-title text-dark fw-bold mb-1">Hardware &amp; Electronic Tools</h5>
-              </div>
-              <span class="badge bg-danger rounded-pill">06</span>
-            </div>
-          </a>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <a href="#" class="product-card card h-100 border-0 shadow-sm text-decoration-none">
-            <div class="card-body p-4 d-flex justify-content-between align-items-start">
-              <div>
-                <h5 class="card-title text-dark fw-bold mb-1">Chemical &amp; Plastic Products</h5>
-              </div>
-              <span class="badge bg-danger rounded-pill">07</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ========== INTEGRATED SOLUTIONS / STATS ========== -->
   <section id="about" class="py-5 bg-dark text-white">
@@ -180,6 +115,129 @@
     </div>
   </section>
 
+
+
+
+    <!-- ========== Our team ========== -->
+    <section class="our-team-section">
+        <div class="container">
+
+          <div class="row">
+            <div class="text-center mb-5">
+              <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Members</p>
+              <h2 class="display-5 fw-bold mb-3"> Company Members </h2>
+            </div>
+          </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Team 1</h3>
+                            <span class="post">Inhaber & Geschäftsführer</span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#"  target="_blank"class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                                
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Team 2</h3>
+                            <span class="post">Stellvertretender  Geschäftsführer</span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Team 3</h3>
+                            <span class="post">Dipl. Physiotherapeut </span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="https://i.ibb.co/8x9xK4H/team.jpg">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Team 4</h3>
+                            <span class="post">Dipl. Physiotherapeut </span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
   <!-- ========== PRODUCTION SOLUTIONS ========== -->
   <section class="py-5">
     <div class="container py-4">
@@ -214,81 +272,20 @@
     </div>
   </section>
 
-  <!-- ========== INDUSTRIES WE SERVE ========== -->
-  <section class="py-5 bg-light">
-    <div class="container py-4">
-      <div class="text-center mb-5">
-        <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">our portfolio</p>
-        <h2 class="display-5 fw-bold mb-3">Industries<br>We Serve</h2>
-        <p class="text-muted col-lg-8 mx-auto">
-          From SMT lines to medical devices, we tailor fixtures, dispensing, and MRO to each workflow.
-        </p>
-      </div>
 
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-          <div class="industry-card card border-0 shadow-sm h-100 overflow-hidden">
-            <img src="https://newlead.asia/wp-content/uploads/2024/05/Industriees-We-serve1-650x572.jpg" class="card-img-top" alt="Surface Mount Technology">
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <h5 class="card-title mb-0 fw-bold">Surface Mount Technology</h5>
-              <span class="badge bg-danger rounded-pill">01</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="industry-card card border-0 shadow-sm h-100 overflow-hidden">
-            <img src="https://newlead.asia/wp-content/uploads/2024/05/Industriees-We-serve2-1-650x572.jpg" class="card-img-top" alt="3C Electronics">
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <h5 class="card-title mb-0 fw-bold">3C Electronics</h5>
-              <span class="badge bg-danger rounded-pill">02</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="industry-card card border-0 shadow-sm h-100 overflow-hidden">
-            <img src="https://newlead.asia/wp-content/uploads/2024/05/Industriees-We-serve3-650x572.jpg" class="card-img-top" alt="Automotive Electronics">
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <h5 class="card-title mb-0 fw-bold">Automotive Electronics</h5>
-              <span class="badge bg-danger rounded-pill">03</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="industry-card card border-0 shadow-sm h-100 overflow-hidden">
-            <img src="https://newlead.asia/wp-content/uploads/2024/05/Industriees-We-serve4-650x572.jpg" class="card-img-top" alt="Medical Devices">
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <h5 class="card-title mb-0 fw-bold">Medical Devices</h5>
-              <span class="badge bg-danger rounded-pill">04</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="industry-card card border-0 shadow-sm h-100 overflow-hidden">
-            <img src="https://newlead.asia/wp-content/uploads/2024/05/Industriees-We-serve5-650x572.jpg" class="card-img-top" alt="Home Appliances">
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <h5 class="card-title mb-0 fw-bold">Home Appliances</h5>
-              <span class="badge bg-danger rounded-pill">05</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="industry-card card border-0 shadow-sm h-100 overflow-hidden">
-            <img src="https://newlead.asia/wp-content/uploads/2024/05/Industriees-We-serve6-650x572.jpg" class="card-img-top" alt="Semiconductors">
-            <div class="card-body d-flex justify-content-between align-items-center">
-              <h5 class="card-title mb-0 fw-bold">Semiconductors</h5>
-              <span class="badge bg-danger rounded-pill">06</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
+
+
+
 
   <!-- ========== TESTIMONIALS ========== -->
   <section class="py-5">
     <div class="container py-4">
       <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold">What Our Clients Say</h2>
+        <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Testimonial</p>
+        <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
+        
       </div>
       <div class="row g-4">
         <div class="col-md-4">
@@ -352,6 +349,70 @@
     </div>
   </section>
 
+
+
+ <!-- ========== GALLERY ========== -->
+  <section id="introduction" class="py-5 bg-light">
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Gallery</p>
+        <h2 class="display-5 fw-bold mb-3">Explore our  Gallery</h2>
+          <div class="row mt-5 mb-5 gallery_images">
+              <div class="col-12">
+                  <div class="d-flex flex-wrap justify-content-center gap-2" id="category-filters">
+                      <button type="button" 
+                              class="btn btn-outline-primary active filter-btn" 
+                              data-filter="all">
+                          All
+                      </button>
+
+                      @foreach($categories as $category)
+                          <button type="button" 
+                                  class="btn btn-outline-primary filter-btn" 
+                                  data-filter="{{ Str::slug($category->id) }}">
+                              {{ $category->title }}
+                          </button>
+                      @endforeach
+                  </div>
+              </div>
+          </div>
+          <div class="row g-4" id="gallery">
+              @forelse($images as $image)
+                  <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" 
+                        data-category="{{ Str::slug($image->slier_for) }}">
+                      <div class="card h-100 border-0 shadow-sm overflow-hidden">
+                          <div class="ratio ratio-4x3">
+                              <img src="{{ $image->image }}" 
+                                    class="card-img-top object-fit-cover" 
+                                    alt="{{ $image->title }}"
+                                    loading="lazy">
+                          </div>
+                          <div class="card-body">
+                              <h6 class="card-title mb-1">{{ $image->title }}</h6>
+                                <!-- @foreach($categories as $category)
+                                @if($category->id == $image->slier_for)
+                                  <small class="text-muted">{{ $category->title }}</small> 
+                              @endif
+                              @endforeach -->
+                          </div>
+                      </div>
+                  </div>
+              @empty
+                  <div class="col-12 text-center py-5">
+                      <p class="text-muted">No images found.</p>
+                  </div>
+              @endforelse
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
   <!-- ========== CONTACT / CTA ========== -->
   <section id="contact" class="py-5 bg-danger text-white bg-welly2">
     <div class="container py-5 text-center">
@@ -397,12 +458,36 @@
 
 
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
 
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
 
+            const selectedFilter = button.getAttribute('data-filter');
 
+            galleryItems.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
 
+                if (selectedFilter === 'all' || selectedFilter === itemCategory) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 
 
 
 </main>
 @endsection
+
