@@ -19,12 +19,11 @@
                 <table class="table table-bordered" id="dataTable">
                     <thead>
                         <tr>
-                            <th>Title</th>
+                            <th>Subject</th>
                             <th>Phone</th>
                             <th>Email</th>
-                            <th>Toll Free</th>
-                            <th>Default</th>
-                            <th>Status</th>
+                            <th>Message</th>
+                            <!-- <th>Status</th> -->
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -54,8 +53,8 @@
                     iDisplayLength: 25,
                     columns: [
                         {
-                            data: 'title',
-                            name: 'title'
+                            data: 'subject',
+                            name: 'subject'
                         },
                         {
                             data: 'phone',
@@ -65,20 +64,24 @@
                             data: 'email',
                             name: 'email'
                         },
+                        // {
+                        //     data: 'toll_free',
+                        //     name: 'toll_free'
+                        // },
                         {
-                            data: 'toll_free',
-                            name: 'toll_free'
+                            data: 'message',
+                            name: 'message'
                         },
-                        {
-                            data: 'is_default',
-                            name: 'is_default',
-                            "className": "text-center w-10"
-                        },
-                        {
-                            data: 'status',
-                            name: 'status',
-                            "className": "text-center w-10"
-                        },
+                        // {
+                        //     data: 'is_default',
+                        //     name: 'is_default',
+                        //     "className": "text-center w-10"
+                        // },
+                        // {
+                        //     data: 'status',
+                        //     name: 'status',
+                        //     "className": "text-center w-10"
+                        // },
                         {
                             data: 'action',
                             name: 'action',

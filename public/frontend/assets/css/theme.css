@@ -1,7 +1,15 @@
 /* ========================================
    NEWLEAD Bootstrap 5 Custom Styles
    ======================================== */
-
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
 :root {
   --primary-red: #dc9200;
   --dark-text: #1a1a1a;
@@ -733,7 +741,9 @@ html {
 
 @media (min-width: 1200px) {
     .display-2 {
-        font-size: 60px;
+      font-size: 50px;
+        text-transform: uppercase;
+        line-height: 65px;
     }
 }
 .service_single a{
@@ -744,4 +754,27 @@ html {
   background: #f2f5fc5e;
     padding: 5px;
     border-radius: 5px;
+}
+
+.developed_by a{
+  color: rgba(255, 255, 255, .5) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+.single_media{
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 8px;
+    display: inline-flex;
+    margin-right: 5px;
+    font-size: 14px;
+}
+.single_media:hover{
+    background: #fff;
+}
+footer a{
+  color: rgba(255, 255, 255, .5) !important;
 }

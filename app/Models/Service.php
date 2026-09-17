@@ -17,6 +17,7 @@ class Service extends Model
         'short_description',
         'description',
         'image',
+        'banner',
         'serial',
         'views',
         'created_by',

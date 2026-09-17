@@ -1,4 +1,8 @@
   <!-- ========== FOOTER ========== -->
+    @php
+    use App\Models\Service;
+    $services = Service::where('status', 1)->select('title', 'slug')->orderBy('serial', 'asc')->limit(5)->get();
+  @endphp
   <footer class="bg-dark text-white-50 pb-2  pt-2 bg-welly">
     <div class="container pt-4 footer_wrapper">
       <div class="row g-4">
@@ -19,7 +23,7 @@
           <ul class="list-unstyled">
               <li class="mb-2"><a href="/" class="text-white-50 text-decoration-none">Home</a></li>
               <li class="mb-2"><a href="/about-us" class="text-white-50 text-decoration-none">About Us</a></li>
-              <li class="mb-2"><a href="#services" class="text-white-50 text-decoration-none">Our Services</a></li>
+              
               <li class="mb-2"><a href="/news" class="text-white-50 text-decoration-none">News</a></li>
               <li class="mb-2"><a href="/contact-us" class="text-white-50 text-decoration-none">Contact Us</a></li>
             </ul>
@@ -27,13 +31,9 @@
         <div class="col-6 col-lg-3">
           <h6 class="text-white mb-3">Solutions</h6>
           <ul class="list-unstyled">
-              <li class="mb-2"><a href="#truck-parts" class="text-white-50 text-decoration-none">Truck Parts</a></li>
-              <li class="mb-2"><a href="#industrial-heavy-equipment" class="text-white-50 text-decoration-none">Industrial Heavy Equipment</a></li>
-              <li class="mb-2"><a href="#renewable-energy-solutions" class="text-white-50 text-decoration-none">Renewable Energy Solutions</a></li>
-               <li class="mb-2"><a href="#china-business-travel-services" class="text-white-50 text-decoration-none">China Business Travel Services</a></li>
-              <li class="mb-2"><a href="#consulting-services" class="text-white-50 text-decoration-none">Consulting Services</a></li>
-              <!-- <li class="mb-2"><a href="#textile-garment" class="text-white-50 text-decoration-none">Textile &amp; Garment</a></li>
-              <li class="mb-2"><a href="#plastic-raw-materials" class="text-white-50 text-decoration-none">Plastic Raw Materials</a></li> -->
+            @foreach($services as $service)
+              <li class="mb-2"><a href="/service/{{ $service->slug }}" class="text-white-50 text-decoration-none">{{ $service->title }}</a></li>
+            @endforeach
             </ul>
         </div>
 
@@ -41,19 +41,55 @@
         <div class="col-lg-3">
           <h6 class="text-white mb-3">Contact</h6>
           <p class="small mb-1"><i class="bi bi-geo-alt me-2"></i>{{ Helper::getSettings('application_address') }}</p>
-          <p class="small mb-1"><i class="bi bi-envelope me-2"></i>{{ Helper::getSettings('application_email') }}</p>
-          <div class="mt-3">
-            <a href="#" class="text-white-50 me-3"><i class="bi bi-facebook fs-5"></i></a>
-            <a href="#" class="text-white-50 me-3"><i class="bi bi-twitter-x fs-5"></i></a>
-            <a href="#" class="text-white-50 me-3"><i class="bi bi-linkedin fs-5"></i></a>
-            <a href="#" class="text-white-50"><i class="bi bi-instagram fs-5"></i></a>
+          <a href="mailto:{{ Helper::getSettings('application_email') }}" class="text-decoration-none">
+              <p class="small mb-1">
+                  <i class="bi bi-envelope me-2"></i>
+                  {{ Helper::getSettings('application_email') }}
+              </p>
+          </a>
+
+          <a href="tel:{{ Helper::getSettings('application_phone') }}" class="text-decoration-none">
+              <p class="small mb-1">
+                  <i class="bi bi-telephone me-2"></i>
+                  {{ Helper::getSettings('application_phone') }}
+              </p>
+          </a>
+          
+          <div class="mt-3 social_bar social_bar_footer">
+
+          
+            <a href="{{ Helper::getSettings('facebook_link') ?: '#' }}">
+                <div class="single_media">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </div>
+            </a>
+
+            <a href="{{ Helper::getSettings('linkedin_link') ?: '#' }}">
+                <div class="single_media">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </div>
+            </a>
+
+            <a href="{{ Helper::getSettings('twitter_link') ?: '#' }}">
+                <div class="single_media">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </div>
+            </a>
+
+            <a href="{{ Helper::getSettings('youtube_link') ?: '#' }}">
+                <div class="single_media">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </div>
+            </a>
+
+
           </div>
         </div>
       </div>
       <hr class="border-secondary my-4">
-      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center developed_by">
         <p class="small mb-2 mb-md-0">&copy; 2026 Shanghai Welly International Trading Ltd.. All rights reserved.</p>
-        <p class="small mb-0">Leaders in Mechanical &amp; Electrical Equipment</p>
+        <p class="small mb-0">Developed by  <a target="__blank" href="https://expotechltd.com.expoaccessories.com">Expo Technology</a></p>
       </div>
     </div>
   </footer>

@@ -49,7 +49,19 @@
                 </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-6 company_logo">
+                <div class="form-group">
+                    <label>Banner (H:520px W:1920px) </label>
+                    <input type="file" class="form-control" name="banner">
+                    @if ($service->banner)
+                        <img src="{{ asset($service->banner) }}" width="120" height="120" class="mt-2">
+                    @endif
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
                 <div class="form-group">
                     <label>Select Category</label>
                     <select name="category_id" class="form-control">
@@ -62,14 +74,14 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label>Serial</label>
                     <input type="text" class="form-control" name="serial" value="{{ $service->serial }}"
                         placeholder="Enter serial">
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="form-group">
                     <label>Status</label>
                     <select name="status" class="form-control">

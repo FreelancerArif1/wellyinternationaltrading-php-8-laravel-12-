@@ -36,13 +36,21 @@
                                 <b>Search Icon </b> <a target="__blank" href="https://fontawesome.com/v4/icons/">Here</a>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label>Image (H:700px W:1000px) </label>
                                 <input type="file" class="form-control" name="image">
                             </div>
                         </div>
-                        <div class="col-md-4">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Banner (H:520px W:1920px) </label>
+                                <input type="file" class="form-control" name="banner">
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label>Select Category</label>
                                 <select name="category_id" class="form-control">
@@ -56,7 +64,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label>Serial</label>
                                 <input type="text" class="form-control" name="serial" placeholder="Enter serial">

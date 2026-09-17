@@ -9,6 +9,9 @@
     <meta name="author" content="" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    <link rel="icon" type="image/png" href="{{ asset(Helper::getSettings('site_favicon')) }}?v={{ time() }}">
+    <link rel="apple-touch-icon" href="{{ asset(Helper::getSettings('site_favicon')) }}?v={{ time() }}">
+
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

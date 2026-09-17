@@ -82,9 +82,12 @@ class ServiceController extends Controller
                 'errors' => $validator->errors(),
             ], 422);
         }
-        $data = $request->except(['image']);
+        $data = $request->except(['image', 'banner']);
         if ($request->hasFile('image')) {
             $data['image'] = $this->fileUpload($request, 'image', '/uploads/service/');
+        }
+        if ($request->hasFile('banner')) {
+            $data['banner'] = $this->fileUpload($request, 'banner', '/uploads/service/');
         }
 
         $data['slug'] = Str::slug($request->title);
@@ -121,42 +124,58 @@ class ServiceController extends Controller
     /**
      * Update the specified resource in storage.
      */
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function update(Request $request, string $id)
     {
         $validator = $this->Validation($request);
-
         if ($validator->fails()) {
             return response()->json([
                 'type' => 'error',
                 'errors' => $validator->errors(),
             ], 422);
         }
-
         $service = Service::findOrFail($id);
-
-        // Exclude framework parameters from mass-assignment
-        $data = $request->except(['image', '_token', '_method']);
-
+        $data = $request->except([
+            'image',
+            'banner',
+            '_token',
+            '_method',
+        ]);
         if ($request->hasFile('image')) {
             if ($service->image && File::exists(public_path($service->image))) {
                 File::delete(public_path($service->image));
             }
-            $data['image'] = $this->fileUpload($request, 'image', '/uploads/service/');
+            $data['image'] = $this->fileUpload(
+                $request,
+                'image',
+                '/uploads/service/'
+            );
         }
-
+        if ($request->hasFile('banner')) {
+            if ($service->banner && File::exists(public_path($service->banner))) {
+                File::delete(public_path($service->banner));
+            }
+            $data['banner'] = $this->fileUpload(
+                $request,
+                'banner',
+                '/uploads/service/'
+            );
+        }
         $data['slug'] = Str::slug($request->title);
         $data['icon'] = $request->icon;
-
-
-        //   return response()->json([
-        //     'type' => 'error',
-         
-        //     'message' => $request->icon
-        // ], 201);
-
-        // Performs an UPDATE query on existing record
         $service->update($data);
-
         return response()->json([
             'type' => 'success',
             'return' => $service->fresh(),
@@ -166,12 +185,22 @@ class ServiceController extends Controller
     }
 
 
+
+
+
+
+
+
+
     public function destroy(string $id)
     {
         $service = Service::findOrFail($id);
         if ($service) {
             if ($service->image && File::exists(public_path($service->image))) {
                 File::delete(public_path($service->image));
+            }
+            if ($service->banner && File::exists(public_path($service->banner))) {
+                File::delete(public_path($service->banner));
             }
             if ($service->video && File::exists(public_path($service->video))) {
                 File::delete(public_path($service->video));

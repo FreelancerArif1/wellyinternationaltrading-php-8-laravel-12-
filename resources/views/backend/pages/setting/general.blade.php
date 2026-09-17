@@ -42,7 +42,7 @@
                             <input type="file" class="form-control"
                                 onchange="previewFile('settingForm #favicon', 'settingForm .favicon_image')"
                                 name="favicon" id="favicon">
-                            <img src="{{ Helper::getSettings('favicon') ? asset(Helper::getSettings('favicon')) : asset('assets/img/no-img.jpg') }}"
+                            <img src="{{ Helper::getSettings('favicon') }}"
                                  class="favicon_image mt-1 border" alt="">
                         </div>
                     </div>

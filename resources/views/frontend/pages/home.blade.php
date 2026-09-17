@@ -16,7 +16,8 @@
             <span class="text-danger">Every trade will be <br>  welly done</span>
           </h1>
           <p class="hero-subtitle lead text-muted mb-4 col-lg-10">
-            Shanghai Welly International Trading Ltd. is an international sourcing and trading company.
+            
+          Shanghai Welly International Trading Ltd. is an international sourcing and trading company headquartered in Minhang District, Shanghai, China, conveniently located near Hongqiao
           </p>
           <div class="d-flex flex-wrap gap-3">
             <a href="#services" class="btn btn-danger btn-lg px-4">Explore Solutions</a>
@@ -92,7 +93,7 @@
 
 
   <!-- ========== INTEGRATED SOLUTIONS / STATS ========== -->
-  <section id="about" class="py-5 bg-dark text-white">
+  <!-- <section id="about" class="py-5 bg-dark text-white">
     <div class="container py-4">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
@@ -133,7 +134,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -259,7 +260,7 @@
 
 
   <!-- ========== PRODUCTION SOLUTIONS ========== -->
-  <section class="py-5">
+  <!-- <section class="py-5">
     <div class="container py-4">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-4 mb-lg-0">
@@ -290,7 +291,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -300,7 +301,7 @@
 
 
   <!-- ========== TESTIMONIALS ========== -->
-  <section class="py-5">
+  <!-- <section class="py-5">
     <div class="container py-4">
       <div class="text-center mb-5">
         <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Testimonial</p>
@@ -367,7 +368,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
 
 
@@ -441,33 +442,60 @@
       <p class="lead mb-4 col-lg-6 mx-auto opacity-90">
         Ready to improve your production line? Reach out for a consultation or request a quote today.
       </p>
-      <a href="mailto: wellytradingltd3@gmail.com" class="btn btn-light btn-lg px-5 me-2 mb-2">Email Us</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to={{ Helper::getSettings('application_email') }}"
+   target="_blank"
+   class="btn btn-light btn-lg px-5 me-2 mb-2">
+    Email Us
+</a>
       <a href="#contact-form" class="btn btn-outline-light btn-lg px-5 mb-2" data-bs-toggle="collapse" data-bs-target="#contactForm">Send Message</a>
       
       <div class="collapse mt-5" id="contactForm">
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <form id="contactFormEl" class="text-start bg-white text-dark p-4 p-md-5 rounded-3 shadow">
-              <div class="row g-3">
+            <form action="{{ route('contact.submit') }}" method="POST" id="contactFormEl" class="text-start bg-white text-dark p-4 p-md-5 rounded-3 shadow">
+              @csrf  
+            <div class="row g-3">
                 <div class="col-md-6">
                   <label for="name" class="form-label">Your Name</label>
-                  <input type="text" class="form-control" id="name" required>
+                  <input type="text" class="form-control" id="name" name="name" required>
                 </div>
                 <div class="col-md-6">
-                  <label for="email" class="form-label">Email Address</label>
-                  <input type="email" class="form-control" id="email" required>
+                  <label for="name" class="form-label">Your Phone</label>
+                  <input type="text" class="form-control" id="name" name="phone" required>
                 </div>
-                <div class="col-12">
+
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="col-6">
                   <label for="subject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="subject">
+                  <input type="text" class="form-control" id="subject" name="subject" required>
                 </div>
                 <div class="col-12">
                   <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" rows="4" required></textarea>
+                  <textarea class="form-control" id="message" rows="4"  name="message" required></textarea>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-danger w-100 py-2">Send Message</button>
                 </div>
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        @if (Session::has('success'))
+                            <div class="alert alert-success">{{ Session::get('success') }}</div>
+                        @endif
+
+                        @if (Session::has('error'))
+                            <div class="alert alert-danger">{{ Session::get('error') }}</div>
+                        @endif
+                    </div>
+                </div>
+
+
+
               </div>
             </form>
           </div>

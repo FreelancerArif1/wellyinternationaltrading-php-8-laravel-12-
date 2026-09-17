@@ -46,20 +46,20 @@ $(function () {
   });
 
   // ---------- Smooth active nav link ----------
-  const sections = $('section[id]');
-  $(window).on('scroll', function () {
-    const scrollPos = $(this).scrollTop() + 100;
-    sections.each(function () {
-      const $sec = $(this);
-      const top = $sec.offset().top;
-      const bottom = top + $sec.outerHeight();
-      const id = $sec.attr('id');
-      if (scrollPos >= top && scrollPos < bottom) {
-        $('.navbar-nav .nav-link').removeClass('active');
-        $('.navbar-nav .nav-link[href="#' + id + '"]').addClass('active');
-      }
-    });
-  });
+  // const sections = $('section[id]');
+  // $(window).on('scroll', function () {
+  //   const scrollPos = $(this).scrollTop() + 100;
+  //   sections.each(function () {
+  //     const $sec = $(this);
+  //     const top = $sec.offset().top;
+  //     const bottom = top + $sec.outerHeight();
+  //     const id = $sec.attr('id');
+  //     if (scrollPos >= top && scrollPos < bottom) {
+  //       $('.navbar-nav .nav-link').removeClass('active');
+  //       $('.navbar-nav .nav-link[href="#' + id + '"]').addClass('active');
+  //     }
+  //   });
+  // });
 
   // ---------- Counter animation ----------
   function animateCounters() {
@@ -94,26 +94,77 @@ $(function () {
   animateCounters();
 
   // ---------- Contact form (demo) ----------
-  $('#contactFormEl').on('submit', function (e) {
+  // $('#contactFormEl').on('submit', function (e) {
+  //   e.preventDefault();
+  //   const name = $('#name').val().trim();
+  //   const email = $('#email').val().trim();
+  //   const message = $('#message').val().trim();
+
+  //   if (!name || !email || !message) {
+  //     alert('Please fill in all required fields.');
+  //     return;
+  //   }
+
+  //   // Demo success
+  //   $(this).html(
+  //     '<div class="text-center py-4">' +
+  //       '<i class="bi bi-check-circle-fill text-success" style="font-size:3rem;"></i>' +
+  //       '<h4 class="mt-3 mb-2">Thank you!</h4>' +
+  //       '<p class="text-muted mb-0">Your message has been received. We will get back to you shortly.</p>' +
+  //     '</div>'
+  //   );
+  // });
+
+
+
+
+$('#contactFormEl').on('submit', function (e) {
     e.preventDefault();
+
+    const form = $(this);
+    const action = form.attr('action');
+
     const name = $('#name').val().trim();
     const email = $('#email').val().trim();
     const message = $('#message').val().trim();
 
     if (!name || !email || !message) {
-      alert('Please fill in all required fields.');
-      return;
+        alert('Please fill in all required fields.');
+        return;
     }
 
-    // Demo success
-    $(this).html(
-      '<div class="text-center py-4">' +
-        '<i class="bi bi-check-circle-fill text-success" style="font-size:3rem;"></i>' +
-        '<h4 class="mt-3 mb-2">Thank you!</h4>' +
-        '<p class="text-muted mb-0">Your message has been received. We will get back to you shortly.</p>' +
-      '</div>'
-    );
-  });
+    $.ajax({
+        url: action,
+        type: 'POST',
+        data: form.serialize(),
+
+        beforeSend: function () {
+            form.find('button[type="submit"]')
+                .prop('disabled', true)
+                .text('Sending...');
+        },
+
+        success: function (response) {
+            form.html(
+                '<div class="text-center py-4">' +
+                    '<i class="bi bi-check-circle-fill text-success" style="font-size:3rem;"></i>' +
+                    '<h4 class="mt-3 mb-2">Thank you!</h4>' +
+                    '<p class="text-muted mb-0">Your message has been received. We will get back to you shortly.</p>' +
+                '</div>'
+            );
+        },
+
+        error: function (xhr) {
+            form.find('button[type="submit"]')
+                .prop('disabled', false)
+                .text('Send Message');
+
+            alert('Something went wrong. Please try again.');
+        }
+    });
+});
+
+
 
   // ---------- Close mobile menu on link click ----------
   $('.navbar-nav .nav-link').on('click', function () {

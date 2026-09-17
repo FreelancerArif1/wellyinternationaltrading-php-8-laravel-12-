@@ -143,8 +143,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/sustainability-list', [SustainabilityController::class, 'list'])->name('admin.sustainability.list');
     Route::resource('careerpage', CareerpageController::class);
     Route::get('/careerpage-list', [CareerpageController::class, 'list'])->name('admin.careerpage.list');
+    
     Route::resource('careerapply', JobAppliedController::class);
     Route::get('/careerapply-list', [JobAppliedController::class, 'list'])->name('admin.careerapply.list');
+    
 
     Route::resource('circular', JobCircularController::class);
     Route::get('/circular-list', [JobCircularController::class, 'list'])->name('admin.circular.list');

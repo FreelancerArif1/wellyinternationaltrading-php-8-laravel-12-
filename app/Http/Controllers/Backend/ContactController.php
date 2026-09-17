@@ -53,9 +53,9 @@ class ContactController extends Controller
 
         ->addColumn('action', function ($row) {
             $btn = '';
-            if (Helper::hasRight('contact.edit')) {
-                $btn = $btn . '<a href="" data-id="'.$row->id.'" class="edit_btn btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
-            }
+            // if (Helper::hasRight('contact.edit')) {
+            //     $btn = $btn . '<a href="" data-id="'.$row->id.'" class="edit_btn btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
+            // }
             if (Helper::hasRight('contact.delete')) {
                 $btn = $btn . '<a class="delete_btn btn btn-sm btn-danger mx-1" data-id="'.$row->id.'" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>';
             }
