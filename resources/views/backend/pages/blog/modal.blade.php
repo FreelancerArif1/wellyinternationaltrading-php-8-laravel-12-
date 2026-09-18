@@ -19,7 +19,12 @@
                                 <input type="text" class="form-control" name="title" placeholder="Enter title">
                             </div>
                         </div>
-
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Banner short description</label>
+                                <textarea class="form-control" name="short_description" placeholder="Enter Banner short description" rows="3"></textarea>
+                            </div>
+                        </div>
 
                         <div class="col-md-12">
                             <div class="form-group">
@@ -34,11 +39,41 @@
                                 <input type="file" class="form-control" name="image">
                             </div>
                         </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Image (H:500px W:1500px) </label>
+                                <input type="file" class="form-control" name="banner">
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Select Category</label>
+                                <select name="category_id" class="form-control">
+                                    <option disabled selected>--select Category--</option>
+                                    @if ($blogcategories)
+                                        @foreach ($blogcategories as $blogcategory)
+                                            <option value="{{ $blogcategory->id }}">{{ $blogcategory->title }}</option>
+                                        @endforeach
+                                    @endif
+                                </select>
+                            </div>
+                        </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Serial</label>
                                 <input type="text" class="form-control" name="serial" placeholder="Enter serial">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Status</label>
+                                <select name="status" class="form-control">
+                                    <option value="1">Active</option>
+                                    <option value="2">Inactive</option>
+                                </select>
                             </div>
                         </div>
                     </div>

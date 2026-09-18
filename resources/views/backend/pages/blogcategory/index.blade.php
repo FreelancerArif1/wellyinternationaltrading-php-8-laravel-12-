@@ -11,7 +11,7 @@
         <div class="heading_button profile-heading">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 style="margin: 0;padding-top: 5px;    font-size: 18px;">Galleries</h1>
+                    <h1 style="margin: 0;padding-top: 5px;    font-size: 18px;">Blog Category</h1>
                 </div>
                 <div class="col-md-6 text-end">
                     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#CreateModalOpen">Add
@@ -23,7 +23,7 @@
             <table id="dataTable" class="table table-bordered">
                 <thead>
                     <tr>
-                        <th></th>
+                        <!-- <th></th> -->
                         <th>Title</th>
                         <th>Serial</th>
                         <th>Status</th>
@@ -34,7 +34,7 @@
 
         </div>
     </div>
-    @include('backend.pages.gallery.modal');
+    @include('backend.pages.blogcategory.modal');
     <script>
         $(document).ready(function() {
 
@@ -58,18 +58,20 @@
                 ],
 
                 ajax: {
-                    url: "{{ route('admin.gallery.list') }}",
+                    url: "{{ route('admin.blogcategory.list') }}",
                     type: 'GET'
                 },
 
-                columns: [{
-                        data: 'image',
-                        name: 'image'
-                    },
+                columns: [
+                    // {
+                    //     data: 'image',
+                    //     name: 'image'
+                    // },
                     {
                         data: 'title',
                         name: 'title'
                     },
+
                     {
                         data: 'serial',
                         name: 'serial'

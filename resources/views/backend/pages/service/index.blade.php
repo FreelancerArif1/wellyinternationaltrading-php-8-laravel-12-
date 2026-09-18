@@ -1,5 +1,5 @@
 @extends('backend.layouts.app')
-@section('title', 'User | ' . Helper::getSettings('application_name') ?? 'Greenery Go')
+@section('title', 'User | ' . Helper::getSettings('application_name') ?? 'Welly international trading')
 @section('content')
     <div class="bo-container">
 

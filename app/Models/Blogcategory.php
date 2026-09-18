@@ -4,20 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Blog extends Model
+class Blogcategory extends Model
 {
     protected $fillable = [
         'title',
-        'short_description',
-        'description',
+        'link',
         'image',
-        'banner',
         'serial',
-        'views',
-        'created_by',
-        'comments',
         'status',
         'category_id',
-        'slug',
     ];
 }

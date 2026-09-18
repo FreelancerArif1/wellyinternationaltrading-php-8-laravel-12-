@@ -4,7 +4,7 @@
     <main id="blog_page">
         <div class="page-banner overlay">
             <div class="media media-bg">
-                <img src="/uploads/about/692c50dc5a42c_1764511964.jpg" width="1920" height="520" loading="eager"
+                <img src="{{ $single->banner }}" width="1920" height="520" loading="eager"
                     alt="Page Banner Image">
             </div>
             <div class="page-banner-content">
@@ -17,9 +17,10 @@
                                     News
                                 </h3>
                                 <div class="about_main_paragraph" data-aos="fade-up" data-aos-delay="200">
-                                    Short description introducing Shanghai Welly International Trading Ltd : “Uniting clean energy, EV mobility,
-                                    sustainable manufacturing, and industrial retail for multi-sector growth.”
+                                    {{ $single->title }}
                                 </div>
+
+                                <p class="banner_short_description">{{ $single->short_description }}</p>
                             </div>
                         </div>
                         <div class="col-md-6"></div>
@@ -41,7 +42,7 @@
                     Filter
                 </drawer-opener>
                 <div class="row">
-                    <div class="col-12 col-lg-7">
+                    <div class="col-12 col-lg-8">
                         <div class="blog-details">
                             <div class="card-blog-list" data-aos="fade-up">
                                 <div class="card-blog-list-media radius18">
@@ -87,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-5">
+                    <div class="col-12 col-lg-4">
                         <div class="sidebar-filter drawer-blog-sidebar">
                             <div class="drawer-headings d-lg-none" data-aos="fade-up">
                                 <div class="heading text-24">Filter</div>
@@ -103,7 +104,7 @@
                                     </svg>
                                 </drawer-opener>
                             </div>
-                            <aside class="blog-sidebar">
+                            <aside class="blog-sidebar-changed">
 
                                 <div class="sidebar-widget radius18" data-aos="fade-up">
                                     <h2 class="sidebar-heading heading text-24">Recent Post</h2>
@@ -113,10 +114,12 @@
                                                 <li>
                                                     <div class="card-blog-list">
                                                         <div class="card-blog-list-media">
+                                                            <a href="/news/{{ $item->slug }}">
                                                             <div class="media">
                                                                 <img src="{{ $item->image }}" alt="blog image"
                                                                     width="1000" height="707" loading="lazy">
                                                             </div>
+                                                            </a>
                                                         </div>
 
                                                         <div class="card-blog-content">

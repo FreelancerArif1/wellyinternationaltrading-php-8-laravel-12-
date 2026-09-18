@@ -17,6 +17,8 @@ use App\Http\Controllers\Backend\ProjectController;
 use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\PartnerController;
 use App\Http\Controllers\Backend\BlogController;
+use App\Http\Controllers\Backend\BlogcategoryController;
+
 use App\Http\Controllers\Backend\ServiceController;
 use App\Http\Controllers\Backend\ServicecategoryController;
 use App\Http\Controllers\Backend\GalleryController;

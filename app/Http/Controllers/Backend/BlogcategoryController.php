@@ -4,12 +4,10 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-
+use Auth;
 use Hash;
 use Helper;
 use App\Models\User;
-use App\Models\Blog;
 use App\Models\Blogcategory;
 use Yajra\DataTables\DataTables;
 use App\Models\LeadingAndGovernor;
@@ -18,7 +16,7 @@ use Illuminate\Support\Facades\Validator;
 use Intervention\Image\Laravel\Facades\Image;
 use Illuminate\Support\Str;
 
-class BlogController extends Controller
+class BlogcategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,12 +24,11 @@ class BlogController extends Controller
     public function index()
     {
         $blogcategories = Blogcategory::where('status', 1)->orderBy('serial', 'asc')->get();
-
-        return view('backend.pages.blog.index', compact('blogcategories'));
+        return view('backend.pages.blogcategory.index', compact('blogcategories'));
     }
     public function list(Request $request)
     {
-        $data = Blog::query();
+        $data = Blogcategory::query();
         $data->orderBy('serial', 'asc');
         return Datatables::of($data)
             ->editColumn('image', function ($row) {
@@ -47,11 +44,11 @@ class BlogController extends Controller
             ->addColumn('action', function ($row) {
                 $btn = '';
                 if (Helper::hasRight('user.edit')) {
-                    $btn = $btn . '<a title="Edit this item." data-url="/admin/blog/' . $row->id . '/edit" class="edit_modal_show btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
+                    $btn = $btn . '<a title="Edit this item." data-url="/admin/blogcategory/' . $row->id . '/edit" class="edit_modal_show btn btn-sm btn-primary "><i class="fa-solid fa-pencil"></i></a>';
                 }
 
                 if (Helper::hasRight('user.delete')) {
-                    $btn = $btn . '<a title="Delete this item." class="ml-2 deleteBtn btn btn-sm btn-danger ms-1" data-url="/admin/blog/' . $row->id . '"><i class="fa fa-trash" aria-hidden="true"></i></a>';
+                    $btn = $btn . '<a title="Delete this item." class="ml-2 deleteBtn btn btn-sm btn-danger ms-1" data-url="/admin/blogcategory/' . $row->id . '"><i class="fa fa-trash" aria-hidden="true"></i></a>';
                 }
                 return $btn;
             })
@@ -79,21 +76,20 @@ class BlogController extends Controller
                 'errors' => $validator->errors(),
             ], 422);
         }
-        $data = $request->except(['image', 'banner']);
+        $data = $request->except(['video', 'image', '_token']);
         if ($request->hasFile('image')) {
-            $data['image'] = $this->fileUpload($request, 'image', '/uploads/blog/');
+            $data['image'] = $this->fileUpload($request, 'image', '/uploads/blogcategory/');
         }
-        if ($request->hasFile('banner')) {
-            $data['banner'] = $this->fileUpload($request, 'banner', '/uploads/blog/');
+        if ($request->hasFile('video')) {
+            $data['video'] = $this->fileUpload($request, 'video', '/uploads/blogcategory/');
         }
         $data['slug'] = Str::slug($request->title);
-        $data['created_by'] = Auth::user()?->id;
-        $blog = Blog::create($data);
+        $blogcategory = Blogcategory::create($data);
         return response()->json([
             'type' => 'success',
-            'return' => $blog,
+            'return' => $blogcategory,
             'status' => 1,
-            'message' => 'Blog added Successfully !',
+            'message' => 'Blogcategory added Successfully !',
         ], 200);
     }
 
@@ -102,7 +98,7 @@ class BlogController extends Controller
      */
     public function show(string $id)
     {
-        // return view('backend.blog.edit');
+        // return view('backend.blogcategory.edit');
         echo 'ddd';
         exit;
     }
@@ -112,9 +108,9 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        $blog = Blog::find($id);
+        $blogcategory = Blogcategory::find($id);
         $blogcategories = Blogcategory::where('status', 1)->orderBy('serial', 'asc')->get();
-        return view('backend.pages.blog.edit', ['blog' => $blog, 'blogcategories' => $blogcategories]);
+        return view('backend.pages.blogcategory.edit', ['blogcategory' => $blogcategory, 'blogcategories' => $blogcategories]);
     }
 
     /**
@@ -131,60 +127,57 @@ class BlogController extends Controller
             ], 422);
         }
 
-        // Find the blog
-        $blog = Blog::findOrFail($id);
+        // Find the blogcategory
+        $blogcategory = Blogcategory::findOrFail($id);
 
         // Prepare data
-        $data = $request->except(['image', 'banner']);
+        $data = $request->except(['video', 'image']);
+
         if ($request->hasFile('image')) {
-            if ($blog->image && File::exists(public_path($blog->image))) {
-                File::delete(public_path($blog->image));
+            if ($blogcategory->image && File::exists(public_path($blogcategory->image))) {
+                File::delete(public_path($blogcategory->image));
             }
-            $data['image'] = $this->fileUpload($request, 'image', '/uploads/blog/');
+            $data['image'] = $this->fileUpload($request, 'image', '/uploads/blogcategory/');
         }
 
-        if ($request->hasFile('banner')) {
-            if ($blog->banner && File::exists(public_path($blog->banner))) {
-                File::delete(public_path($blog->banner));
-            }
-            $data['banner'] = $this->fileUpload($request, 'banner', '/uploads/blog/');
+        if ($request->hasFile('video')) {
+            $data['video'] = $this->fileUpload($request, 'video', '/uploads/blogcategory/');
         }
-
         $data['slug'] = Str::slug($request->title);
-        // Update the blog
-        $blog->update($data);
+        // Update the blogcategory
+        $blogcategory->update($data);
 
         return response()->json([
             'type' => 'success',
-            'return' => $blog,
+            'return' => $blogcategory,
             'status' => 1,
-            'message' => 'Blog updated successfully!',
+            'message' => 'Blogcategory updated successfully!',
         ], 200);
     }
 
 
     public function destroy(string $id)
     {
-        $blog = Blog::findOrFail($id);
-        if ($blog) {
-            if ($blog->image && File::exists(public_path($blog->image))) {
-                File::delete(public_path($blog->image));
+        $blogcategory = Blogcategory::findOrFail($id);
+        if ($blogcategory) {
+            if ($blogcategory->image && File::exists(public_path($blogcategory->image))) {
+                File::delete(public_path($blogcategory->image));
             }
-            if ($blog->video && File::exists(public_path($blog->video))) {
-                File::delete(public_path($blog->video));
+            if ($blogcategory->video && File::exists(public_path($blogcategory->video))) {
+                File::delete(public_path($blogcategory->video));
             }
-            $blog->delete();
+            $blogcategory->delete();
 
             return response()->json([
                 'type' => 'success',
                 'status' => 1,
-                'message' => 'Blog deleted successfully!',
+                'message' => 'Blogcategory deleted successfully!',
             ], 200);
         } else {
             return response()->json([
                 'type' => 'error',
                 'status' => 0,
-                'message' => 'Blog not found',
+                'message' => 'Blogcategory not found',
             ], 200);
         }
     }
@@ -193,7 +186,10 @@ class BlogController extends Controller
         return Validator::make($request->except(['_token', '_method']), [
             'title'          => 'required|string|max:255',
             'description'    => 'nullable|string',
+            'button_link'    => 'nullable|url',
+            'video' => 'nullable|mimes:mp4,mov,avi,webm,mkv|max:200000',
             'image' => 'nullable|mimes:jpg,jpeg,png,webp|max:2048',
+            'youtube_video'  => 'nullable|url',
             'serial'         => 'required|integer',
         ]);
         return $validator;

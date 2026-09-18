@@ -204,14 +204,43 @@
                 @endif
 
 
-                @if (Helper::hasRight('dashboard.view'))
-                    <li class="nav-item {{ Route::is('blog.index') ? 'active' : '' }}">
-                        <a href="{{ route('blog.index') }}">
-                            <i class="fa fa-home" aria-hidden="true"></i>
-                            <p class="ms-4"><span class="sub-item">{{ trans('Blogs') }}</span></p>
+
+                @if (Helper::hasRight('setting.view'))
+                    <li class="nav-item">
+                        <a data-bs-toggle="collapse" href="#blogs"
+                            aria-expanded="@if (Route::is('blog.index')) true @else false @endif">
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                            <p class="ms-4">{{ trans('Blogs') }}</p>
+                            <span class="caret"></span>
                         </a>
+                        <div class="collapse @if (Route::is('blog.index') || Route::is('blogcategory.index')) show @endif" id="blogs">
+                            <ul class="nav nav-collapse">
+                                @if (Helper::hasRight('role.view'))
+                                    <li class="{{ Route::is('blog.index') ? 'active' : '' }}">
+                                        <a href="{{ route('blog.index') }}">
+                                            <span class="sub-item">{{ trans('Blogs') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                                @if (Helper::hasRight('blogcategory.view'))
+                                    <li class="{{ Route::is('blogcategory.index') ? 'active' : '' }}">
+                                        <a href="{{ route('blogcategory.index') }}">
+                                        <span class="sub-item">{{ trans('Blog Category') }}</span>
+                                        </a>
+                                    </li>
+                                @endif
+
+                            </ul>
+                        </div>
                     </li>
                 @endif
+
+
+
+                
+
+
                 @if (Helper::hasRight('dashboard.view'))
                     <li class="nav-item {{ Route::is('sustainability.index') ? 'active' : '' }}">
                         <a href="{{ route('sustainability.index') }}">
