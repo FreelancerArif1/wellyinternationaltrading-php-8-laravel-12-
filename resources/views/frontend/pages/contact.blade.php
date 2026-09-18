@@ -4,7 +4,7 @@
     <main id="blog_page">
         <div class="page-banner overlay">
             <div class="media media-bg">
-                <img src="/uploads/about/692c50dc5a42c_1764511964.jpg" width="1920" height="520" loading="eager"
+                <img src="/uploads/about/contact-us.jpg" width="1920" height="520" loading="eager"
                     alt="Page Banner Image">
             </div>
             <div class="page-banner-content">

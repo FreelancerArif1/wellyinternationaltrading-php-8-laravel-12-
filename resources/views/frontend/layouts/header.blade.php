@@ -29,7 +29,7 @@
 
     <li class="nav-item">
         <a class="nav-link {{ request()->routeIs('about') ? 'active' : '' }} fw-medium"
-           href="{{ route('about') }}">
+           href="/#about-us">
             ABOUT US
         </a>
     </li>

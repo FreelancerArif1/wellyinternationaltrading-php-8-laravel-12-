@@ -778,3 +778,8 @@ html {
 footer a{
   color: rgba(255, 255, 255, .5) !important;
 }
+.banner_short_description{
+    text-align: justify;
+    color: #fff;
+    margin-top: 15px;
+}

@@ -22,7 +22,7 @@
           <h6 class="text-white mb-3">Quick Links</h6>
           <ul class="list-unstyled">
               <li class="mb-2"><a href="/" class="text-white-50 text-decoration-none">Home</a></li>
-              <li class="mb-2"><a href="/about-us" class="text-white-50 text-decoration-none">About Us</a></li>
+              <li class="mb-2"><a href="/#about-us" class="text-white-50 text-decoration-none">About Us</a></li>
               
               <li class="mb-2"><a href="/news" class="text-white-50 text-decoration-none">News</a></li>
               <li class="mb-2"><a href="/contact-us" class="text-white-50 text-decoration-none">Contact Us</a></li>

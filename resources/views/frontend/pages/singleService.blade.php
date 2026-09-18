@@ -19,6 +19,8 @@
                                 <div class="about_main_paragraph" data-aos="fade-up" data-aos-delay="200">
                                     {{ $single->title }}
                                 </div>
+
+                                <p class="banner_short_description">{{ $single->short_description }}</p>
                             </div>
                         </div>
                         <div class="col-md-6"></div>

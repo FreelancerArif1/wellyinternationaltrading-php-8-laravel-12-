@@ -20,6 +20,14 @@
                             </div>
                         </div>
 
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Banner short description</label>
+                                <textarea class="form-control" name="short_description" placeholder="Enter Banner short description" rows="3"></textarea>
+                            </div>
+                        </div>
+                        
+
 
                         <div class="col-md-12">
                             <div class="form-group">
@@ -45,7 +53,7 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label>Banner (H:520px W:1920px) </label>
+                                <label>Banner (H:520px W:1500px) </label>
                                 <input type="file" class="form-control" name="banner">
                             </div>
                         </div>
