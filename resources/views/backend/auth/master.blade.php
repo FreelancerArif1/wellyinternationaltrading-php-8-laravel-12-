@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @include('backend.layouts.styles')
+    <link rel="icon" type="image/png" href="{{ asset(Helper::getSettings('site_favicon')) }}?v={{ time() }}">
+    <link rel="apple-touch-icon" href="{{ asset(Helper::getSettings('site_favicon')) }}?v={{ time() }}">
 
 </head>
 
