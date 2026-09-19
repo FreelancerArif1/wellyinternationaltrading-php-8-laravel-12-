@@ -100,6 +100,7 @@ h1, h2, h3, .display-2, .display-4, .display-5 {
 .hero-subtitle {
   font-size: 1.15rem;
   line-height: 1.7;
+      text-align: justify;
 }
 
 .hero-social {

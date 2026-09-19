@@ -10,15 +10,15 @@
   <section id="home" class="hero-section">
     <div class="container">
       <div class="row align-items-center min-vh-75">
-        <div class="col-lg-8">
+        <div class="col-lg-10">
           <h1 class="hero-title display-2 fw-bold mb-3">
             <span class="text-dark">At welly trading</span><br>
             <span class="text-danger">Every trade will be <br>  welly done</span>
           </h1>
           <p class="hero-subtitle lead text-muted mb-4 col-lg-10">
-            
-          Shanghai Welly International Trading Ltd. is an international sourcing and trading company headquartered in Minhang District, Shanghai, China, conveniently located near Hongqiao
-          </p>
+          Shanghai Welly International Trading Ltd. is a professional international sourcing and trading company headquartered in Shanghai, China, conveniently located near Hongqiao Airport and Railway Station. We care about what our clients actually need and help them solve the issues, instead of just selling what we have.    
+         
+        </p>
           <div class="d-flex flex-wrap gap-3">
             <a href="#services" class="btn btn-danger btn-lg px-4">Explore Solutions</a>
             <a href="/contact-us" class="btn btn-outline-dark btn-lg px-4">Contact Us</a>
