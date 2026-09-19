@@ -380,7 +380,7 @@
             <h2 class="display-5 fw-bold mb-3">Explore our Gallery</h2>
             
             <!-- Category Filters -->
-            <div class="row gallery_images mb-4">
+            <div class="row gallery_images">
                 <div class="col-12">
                     <div class="d-flex flex-wrap justify-content-center gap-2" id="category-filters">
                         <button type="button" 
