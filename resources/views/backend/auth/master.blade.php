@@ -9,8 +9,8 @@
     <link rel="apple-touch-icon" href="{{ asset(Helper::getSettings('site_favicon')) }}?v={{ time() }}">
 
 
-    <style>
-        .loging_page_logo{
+<style>
+    .loging_page_logo{
     height: 100px;
     width: 100px;
     background: #fff;
@@ -18,19 +18,23 @@
     margin: 0 auto;
     border: 1px solid #ca9f3a;
     padding: 1px;
-}
+    }
 .loging_page_logo img{
-    object-fit: contain;
+object-fit: contain;
 }
 .login-form a, .login-form p{
-    color: #dbb652 !important;
+color: #dbb652 !important;
 }
- .btn-primary:hover, .login-form .btn {
-    color: #fff !important;
-    background: #dbb652 !important;
-    border-color: #dbb652 !important;
+.btn-primary:hover, .login-form .btn {
+color: #fff !important;
+background: #dbb652 !important;
+border-color: #dbb652 !important;
 }
-    </style>
+.bgoverlay {
+background: #0000009c;
+}
+
+</style>
 </head>
 
 <body class="login">
