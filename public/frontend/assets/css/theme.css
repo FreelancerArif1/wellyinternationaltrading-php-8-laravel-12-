@@ -403,6 +403,13 @@ footer a:hover {
 html {
   scroll-behavior: smooth;
 }
+  .hero-title {
+    color: rgb(17 60 152) !important;
+  }
+  .hero-title .text-dark{
+    color: rgb(17 60 152) !important;
+  }
+
 
 /* Responsive tweaks */
 @media (max-width: 991.98px) {
@@ -416,10 +423,10 @@ html {
     text-transform: uppercase;
     padding-top: 35px;
     line-height: 40px;
-    /* color: rgb(17 60 152) !important; */
+    color: rgb(17 60 152) !important;
   }
   .hero-title .text-dark{
-    /* color: rgb(17 60 152) !important; */
+    color: rgb(17 60 152) !important;
   }
   .navbar-nav .nav-link.active::after {
     display: none;
