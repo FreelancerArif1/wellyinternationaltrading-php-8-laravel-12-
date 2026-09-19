@@ -77,3 +77,11 @@
 .loging_page_logo img{
     object-fit: contain;
 }
+.login-form a, .login-form p{
+    color: #dbb652 !important;
+}
+ .btn-primary:hover, .login-form .btn {
+    color: #fff !important;
+    background: #dbb652 !important;
+    border-color: #dbb652 !important;
+}
