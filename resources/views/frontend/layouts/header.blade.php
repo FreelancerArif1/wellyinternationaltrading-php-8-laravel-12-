@@ -5,7 +5,7 @@
 <style>
    
 </style>
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+<nav id="mainvanbar" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center nav_logo" href="/">
             <img src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}" alt="logo-image">

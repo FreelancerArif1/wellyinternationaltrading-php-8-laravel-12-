@@ -41,7 +41,7 @@ h1, h2, h3, .display-2, .display-4, .display-5 {
 }
 
 .navbar-nav .nav-link {
-  color: #333 !important;
+  color: #fff !important;
   font-size: 0.9rem;
   letter-spacing: 0.04em;
   padding: 0.5rem 1rem !important;
@@ -561,6 +561,15 @@ html {
   background-color: #0a1630; /* fallback */
   color: #fff;
 }
+#mainvanbar{
+  background-color: #0a1630;
+    background-image: url('../img/bg-slim.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+     border-bottom: 1px solid #dddddd73;
+  color: #fff;
+}
 
 .hero-section-2 {
     position: relative;
@@ -971,9 +980,7 @@ footer a{
   margin-bottom: 3rem;
   margin-top: 3rem;
 }
-.navbar-collapse {
-    padding-bottom: 20px;
-}
+
 .navbar-expand-lg .navbar-nav .dropdown-menu li {
     margin-bottom: 0px;
 }
@@ -997,6 +1004,9 @@ footer a{
 
 
 @media (max-width: 991px) {
+  .navbar-collapse {
+    padding-bottom: 20px;
+}
   .footer_about_us{
     display: none;
   }
