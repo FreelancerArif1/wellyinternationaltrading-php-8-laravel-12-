@@ -411,12 +411,13 @@ html {
     min-height: auto;
   }
 
-      .hero-title {
-        font-size: 26px;
-        text-transform: uppercase;
-        padding-top: 35px;
-        line-height: 40px;
-    }
+  .hero-title {
+    font-size: 26px;
+    text-transform: uppercase;
+    padding-top: 35px;
+    line-height: 40px;
+    color: rgb(17 60 152) !important;
+  }
   .navbar-nav .nav-link.active::after {
     display: none;
   }
