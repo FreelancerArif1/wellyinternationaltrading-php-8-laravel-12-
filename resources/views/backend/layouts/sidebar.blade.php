@@ -158,7 +158,7 @@
                                         </a>
                                     </li>
                                 @endif
-                                @if (Helper::hasRight('user.view'))
+                                @if (Helper::hasRight('company.view'))
                                     <li class="{{ Route::is('company.index') ? 'active' : '' }}">
                                         <a href="{{ route('company.index') }}">
                                             <span class="sub-item">{{ trans('Company list') }}</span>
@@ -241,7 +241,7 @@
                 
 
 
-                @if (Helper::hasRight('dashboard.view'))
+                @if (Helper::hasRight('sustainability.view'))
                     <li class="nav-item {{ Route::is('sustainability.index') ? 'active' : '' }}">
                         <a href="{{ route('sustainability.index') }}">
                             <i class="fa fa-home" aria-hidden="true"></i>
@@ -251,7 +251,7 @@
                 @endif
 
 
-                @if (Helper::hasRight('setting.view'))
+                @if (Helper::hasRight('career.view'))
                     <li class="nav-item">
                         <a data-bs-toggle="collapse" href="#career"
                             aria-expanded="@if (Route::is('slider.index')) true @else false @endif">
@@ -351,7 +351,7 @@
 
 
 
-                @if (Helper::hasRight('dashboard.view'))
+                @if (Helper::hasRight('career.view'))
                     <li class="nav-item {{ Route::is('careerapply.index') ? 'active' : '' }}">
                         <a href="{{ route('careerapply.index') }}">
                             <i class="fa fa-home" aria-hidden="true"></i>
@@ -359,7 +359,7 @@
                         </a>
                     </li>
                 @endif
-                @if (Helper::hasRight('dashboard.view'))
+                @if (Helper::hasRight('career.view'))
                     <li class="nav-item {{ Route::is('circular.index') ? 'active' : '' }}">
                         <a href="{{ route('circular.index') }}">
                             <i class="fa fa-home" aria-hidden="true"></i>
@@ -367,6 +367,9 @@
                         </a>
                     </li>
                 @endif
+
+
+
             </ul>
         </div>
     </div>

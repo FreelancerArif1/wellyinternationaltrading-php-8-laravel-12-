@@ -12,7 +12,7 @@
       <div class="row align-items-center min-vh-75">
         <div class="col-lg-10">
           <h1 class="hero-title display-2 fw-bold mb-3">
-            <span class="text-dark">At welly trading</span><br>
+            <span class="text-dark-changed">At welly trading</span><br>
             <span class="text-danger-changed">Every trade will be <br>  welly done</span>
           </h1>
           <p class="hero-subtitle lead text-muted mb-4 col-lg-10">
@@ -20,13 +20,18 @@
          
         </p>
           <div class="d-flex flex-wrap gap-3">
-            <a href="#services" class="btn btn-danger btn-lg px-4">Explore Solutions</a>
-            <a href="/contact-us" class="btn btn-outline-dark btn-lg px-4">Contact Us</a>
+            <a href="#services" class="btn btn-danger btn-lg px-4"> Solutions</a>
+            <a href="/contact-us" class="btn btn-danger btn-lg px-4">Contact Us</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="hero-social d-none d-lg-flex">
+  </section>
+
+  
+<section class="hero-section-2">
+  <div class="container">
+        <div class="hero-social d-none d-lg-flex">
       <div class="social_bar">
         <a href="{{ Helper::getSettings('facebook_link') ?: '#' }}" class="text-muted me-3"> <i class="fa fa-facebook" aria-hidden="true"></i></i> Facebook</a>
         <a href="{{ Helper::getSettings('linkedin_link') ?: '#' }}" class="text-muted me-3"> <i class="fa fa-linkedin" aria-hidden="true"></i> Linkedin </a>
@@ -34,8 +39,8 @@
         <a href="{{ Helper::getSettings('youtube_link') ?: '#' }}" class="text-muted me-3"> <i class="fa fa-youtube-play" aria-hidden="true"></i> Youtube</a>
       </div>
     </div>
-  </section>
-
+  </div>
+</section>
 
 
 

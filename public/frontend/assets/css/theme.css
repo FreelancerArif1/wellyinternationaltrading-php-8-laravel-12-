@@ -77,7 +77,7 @@ h1, h2, h3, .display-2, .display-4, .display-5 {
 /* Hero */
 .hero-section {
   position: relative;
-  padding: 3rem 0 6rem;
+  padding: 3rem 0 2rem;
   background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
   min-height: 70vh;
   display: flex;
@@ -403,12 +403,7 @@ footer a:hover {
 html {
   scroll-behavior: smooth;
 }
-  .hero-title {
-    color: rgb(17 60 152) !important;
-  }
-  .hero-title .text-dark{
-    color: rgb(17 60 152) !important;
-  }
+
 
 
 /* Responsive tweaks */
@@ -423,10 +418,10 @@ html {
     text-transform: uppercase;
     padding-top: 35px;
     line-height: 40px;
-    color: rgb(17 60 152) !important;
+        color: rgb(198 198 198) !important;
   }
   .hero-title .text-dark{
-    color: rgb(17 60 152) !important;
+        color: rgb(198 198 198) !important;
   }
   .navbar-nav .nav-link.active::after {
     display: none;
@@ -556,7 +551,31 @@ html {
   background-color: #0a1630; /* fallback */
   color: #fff;
   position: relative;
-      border-top: 1px solid #ffffff1c;
+  border-top: 1px solid #ffffff1c;
+}
+#home{
+    background-image: url('../img/bg-slim.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #0a1630; /* fallback */
+  color: #fff;
+}
+
+.hero-section-2 {
+    position: relative;
+    padding: 0rem 0 6rem;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    display: flex;
+    align-items: center;
+}
+  .hero-title {
+    /* color: rgb(198 198 198); */
+    color: #ddd;
+  }
+#home .hero-subtitle{
+  /* color: #fff !important; */
+  color: rgb(198 198 198)  !important;
 }
 
 /* Optional: soft dark overlay so text stays readable */
@@ -905,9 +924,9 @@ html {
 
 @media (min-width: 1200px) {
     .display-2 {
-      font-size: 50px;
+        font-size: 42px;
         text-transform: uppercase;
-        line-height: 65px;
+        line-height: 55px;
     }
 }
 .service_single a{
