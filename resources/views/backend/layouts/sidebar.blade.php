@@ -127,7 +127,7 @@
                 @endif
 
 
-                @if (Helper::hasRight('setting.view'))
+                @if (Helper::hasRight('company.view'))
                     <li class="nav-item">
                         <a data-bs-toggle="collapse" href="#Companies"
                             aria-expanded="@if (Route::is('slider.index')) true @else false @endif">
