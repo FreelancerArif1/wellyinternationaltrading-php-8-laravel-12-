@@ -12,7 +12,7 @@
             <img src="{{ Helper::getSettings('site_logo') ? asset(Helper::getSettings('site_logo')) : '/logo.png' }}"
                 alt="logo-image">
         </a>
-         <p class="mt-3">
+         <p class="mt-3 footer_about_us">
             {{ Str::words(Helper::getSettings('application_toll_free'), 25, '...') }}
         </p>
         </div>

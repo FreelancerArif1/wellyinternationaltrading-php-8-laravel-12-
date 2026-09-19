@@ -941,6 +941,9 @@ footer a{
   margin-top: 3rem;
 }
 @media (max-width: 991px) {
+  .footer_about_us{
+    display: none;
+  }
 #gallery .card-body{
 display: none;
 }
