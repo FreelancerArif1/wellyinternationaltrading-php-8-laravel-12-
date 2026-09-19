@@ -416,10 +416,10 @@ html {
     text-transform: uppercase;
     padding-top: 35px;
     line-height: 40px;
-    color: rgb(17 60 152) !important;
+    /* color: rgb(17 60 152) !important; */
   }
   .hero-title .text-dark{
-    color: rgb(17 60 152) !important;
+    /* color: rgb(17 60 152) !important; */
   }
   .navbar-nav .nav-link.active::after {
     display: none;
@@ -958,7 +958,6 @@ footer a{
 .navbar-expand-lg .navbar-nav .dropdown-menu li:first-child {
     margin-top: 2px;
 }
-
 
 
 
