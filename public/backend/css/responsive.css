@@ -65,3 +65,15 @@
 .bgoverlay {
     background: #0000009c;
 }
+.loging_page_logo{
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    border: 1px solid #ca9f3a;
+    padding: 5px;
+}
+.loging_page_logo img{
+    object-fit: contain;
+}

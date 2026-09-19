@@ -10539,7 +10539,7 @@ body[data-background-color=dark] .jvm-zoom-btn {
 .login .wrapper.wrapper-login .container-login,
 .login .wrapper.wrapper-login .container-signup {
    width: 400px;
-   padding: 60px 22px;
+   padding: 22px 22px;
    border-radius: 5px
 }
 

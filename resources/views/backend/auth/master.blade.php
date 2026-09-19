@@ -15,7 +15,10 @@
         <div class="bgoverlay">
             <div class="wrapper wrapper-login">
                 <div class="container container-login animated fadeIn">
-                    <h3 class="text-center">Login</h3>
+                    <!-- <h3 class="text-center">Login</h3> -->
+                    <div class="row loging_page_logo text-center">
+                        <img src="{{ Helper::getSettings('site_logo') }}" alt="">
+                    </div>
                     <div class="login-form">
                         @yield('content')
                     </div>
