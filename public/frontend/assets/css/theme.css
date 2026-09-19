@@ -687,7 +687,7 @@ html {
 .top-pointer-dropdown::before {
   content: "";
   position: absolute;
-  top: -6px; /* Position above the dropdown menu */
+  top: -7px; /* Position above the dropdown menu */
   left: 20px; /* Distance from the left edge */
   width: 0;
   height: 0;
@@ -726,7 +726,7 @@ html {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .top-pointer-dropdown .dropdown-item:hover {
-    background-color: #dc92009c;
+    background-color: #dc9200 ;
     color: #fff;
 }
 .dropdown-item:focus, .dropdown-item:hover {
@@ -743,6 +743,13 @@ html {
   /* border-radius: 0 0 5px 5px; */
   left: 15px;
   padding: 0;
+
+
+
+    background-image: url(../img/bg-slim.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 .dropdown-item.active, .dropdown-item:active {
   background-color: #dc9200  !important;
@@ -991,9 +998,11 @@ footer a{
 .navbar-expand-lg .navbar-nav .dropdown-menu li:first-child .dropdown-item{
   border-radius: 6px 6px 0px 0px;
 }
-
+.navbar-expand-lg .navbar-nav .dropdown-menu li:last-child .dropdown-item {
+    border-radius: 0px 0px 6px 6px;
+}
 .navbar-expand-lg .navbar-nav .dropdown-menu li:first-child {
-    margin-top: 2px;
+    margin-top: 0px;
 }
 
 
