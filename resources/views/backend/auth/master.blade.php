@@ -17,7 +17,7 @@
     border-radius: 50%;
     margin: 0 auto;
     border: 1px solid #ca9f3a;
-    padding: 5px;
+    padding: 1px;
 }
 .loging_page_logo img{
     object-fit: contain;
