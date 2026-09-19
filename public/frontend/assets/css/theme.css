@@ -940,6 +940,23 @@ footer a{
   margin-bottom: 3rem;
   margin-top: 3rem;
 }
+.navbar-collapse {
+    padding-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 991px) {
   .footer_about_us{
     display: none;
