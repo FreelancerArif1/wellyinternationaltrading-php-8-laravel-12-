@@ -408,6 +408,10 @@ html {
 
 /* Responsive tweaks */
 @media (max-width: 991.98px) {
+  .navbar-toggler {
+    color: #fff  !important;
+    background-color: #ddd !important;
+  }
   .hero-section {
     padding: 0.5rem 0 5rem;
     min-height: auto;
@@ -715,15 +719,15 @@ html {
 }
 /* Dropdown Menu Item Styling */
 .top-pointer-dropdown .dropdown-item {
-  color: #334155;
+  color: #fff;
   padding: 8px 16px;
   font-size: 0.9rem;
   font-weight: 500;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .top-pointer-dropdown .dropdown-item:hover {
-  background-color: #dc92003b;
-  color: #333;
+    background-color: #dc92009c;
+    color: #fff;
 }
 .dropdown-item:focus, .dropdown-item:hover {
   color: var(--bs-dropdown-link-hover-color);

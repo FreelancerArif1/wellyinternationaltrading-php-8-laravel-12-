@@ -3,7 +3,9 @@
     $services = Service::where('status', 1)->select('title', 'slug')->orderBy('serial', 'asc')->get();
 @endphp
 <style>
-   
+   .bg-white {
+    background-color: #0a1630 !important;
+}
 </style>
 <nav id="mainvanbar" class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
     <div class="container">
