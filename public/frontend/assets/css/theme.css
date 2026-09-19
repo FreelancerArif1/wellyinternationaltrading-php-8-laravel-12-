@@ -418,6 +418,9 @@ html {
     line-height: 40px;
     color: rgb(17 60 152) !important;
   }
+  .hero-title .text-dark{
+    color: rgb(17 60 152) !important;
+  }
   .navbar-nav .nav-link.active::after {
     display: none;
   }
