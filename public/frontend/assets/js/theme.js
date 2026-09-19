@@ -167,12 +167,16 @@ $('#contactFormEl').on('submit', function (e) {
 
 
   // ---------- Close mobile menu on link click ----------
-  $('.navbar-nav .nav-link').on('click', function () {
-    const $collapse = $('.navbar-collapse');
-    if ($collapse.hasClass('show')) {
-      $collapse.collapse('hide');
-    }
-  });
+  // $('.navbar-nav .nav-link').on('click', function () {
+  //   const $collapse = $('.navbar-collapse');
+  //   if ($collapse.hasClass('show')) {
+  //     $collapse.collapse('hide');
+  //   }
+  // });
+
+
+
+  
 });
 
 

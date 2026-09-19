@@ -542,7 +542,7 @@ width: 100px;
         padding-top: 20px;
 }
 .headeremtyspace {
-    padding-top: 50px;
+    /* padding-top: 50px; */
 }
 .text-11 {
     line-height: 2;
@@ -793,3 +793,10 @@ font-size: 16px;
         min-height: 100vh;
     }
 }
+
+
+
+
+
+
+

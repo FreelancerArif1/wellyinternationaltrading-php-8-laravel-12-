@@ -943,7 +943,16 @@ footer a{
 .navbar-collapse {
     padding-bottom: 20px;
 }
+.navbar-expand-lg .navbar-nav .dropdown-menu li {
+    margin-bottom: 0px;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu li:first-child .dropdown-item{
+  border-radius: 6px 6px 0px 0px;
+}
 
+.navbar-expand-lg .navbar-nav .dropdown-menu li:first-child {
+    margin-top: 2px;
+}
 
 
 
@@ -982,3 +991,39 @@ padding: 4px;
 }
 }
 
+@media (max-width: 991.98px) {
+    .welly_dropdown_open{
+        margin-left: 20px;
+        margin-top: 0;
+    }
+    .top-pointer-dropdown::before {
+        display: none;
+    }
+    /* Mobile Navbar state */
+    #mainNav {
+        display: none;
+    }
+    #mainNav.welly_open {
+        display: block !important;
+    }
+
+    /* Dropdown hidden by default on mobile */
+    .dropdown-menu {
+        display: none;
+    }
+
+    /* Shows ONLY when 'welly_dropdown_open' class is added via click */
+    .dropdown-menu.welly_dropdown_open {
+        display: block !important;
+        position: static !important;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+    .navbar-toggler:focus {
+      box-shadow: none !important;
+      border: 1px solid #000 !important;
+  }
+
+}
