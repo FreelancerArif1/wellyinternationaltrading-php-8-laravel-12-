@@ -174,3 +174,113 @@ $('#contactFormEl').on('submit', function (e) {
     }
   });
 });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic Modal Elements
+    const modal = document.getElementById('imgSliderModal');
+    const modalImg = document.getElementById('imgSliderActiveImg');
+    const modalCaption = document.getElementById('imgSliderCaption');
+    const modalCounter = document.getElementById('imgSliderCounter');
+    const btnClose = document.getElementById('imgSliderClose');
+    const btnPrev = document.getElementById('imgSliderPrev');
+    const btnNext = document.getElementById('imgSliderNext');
+
+    let visibleItems = [];
+    let currentIndex = 0;
+
+    // Helper: Refresh list of currently visible gallery items (handles category filtering automatically)
+    function updateVisibleGallery() {
+        visibleItems = Array.from(document.querySelectorAll('.gallery-item'))
+            .filter(item => item.style.display !== 'none');
+    }
+
+    // Function to render the popup content at current index
+    function showImage(index) {
+        if (visibleItems.length === 0) return;
+
+        // Wrap around limits
+        if (index < 0) currentIndex = visibleItems.length - 1;
+        else if (index >= visibleItems.length) currentIndex = 0;
+        else currentIndex = index;
+
+        const currentItem = visibleItems[currentIndex];
+        const imgEl = currentItem.querySelector('.img-popup-target');
+        const titleEl = currentItem.querySelector('.img-popup-title');
+
+        modalImg.src = imgEl ? imgEl.src : '';
+        modalCaption.textContent = titleEl ? titleEl.textContent : '';
+        modalCounter.textContent = `${currentIndex + 1} / ${visibleItems.length}`;
+    }
+
+    // Open Modal Function
+    function openModal(itemElement) {
+        updateVisibleGallery();
+        currentIndex = visibleItems.indexOf(itemElement);
+        if (currentIndex === -1) currentIndex = 0;
+
+        showImage(currentIndex);
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent page scroll
+    }
+
+    // Close Modal Function
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Bind Click Listener on Gallery Items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        const trigger = item.querySelector('.img-popup-trigger');
+        if (trigger) {
+            trigger.addEventListener('click', () => openModal(item));
+        }
+    });
+
+    // Control Event Listeners
+    btnClose.addEventListener('click', closeModal);
+    btnNext.addEventListener('click', () => showImage(currentIndex + 1));
+    btnPrev.addEventListener('click', () => showImage(currentIndex - 1));
+
+    // Close Modal when clicking background overlay
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Keyboard Navigation (Esc, Left Arrow, Right Arrow)
+    document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowRight') showImage(currentIndex + 1);
+        if (e.key === 'ArrowLeft') showImage(currentIndex - 1);
+    });
+
+    // Category Filtering Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Update visible list for popup slider
+            updateVisibleGallery();
+        });
+    });
+});

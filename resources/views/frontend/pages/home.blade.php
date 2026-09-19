@@ -373,60 +373,80 @@
 
 
  <!-- ========== GALLERY ========== -->
-  <section id="introduction" class="py-5 bg-light">
+<section id="introduction" class="py-5 bg-light">
     <div class="container py-4">
-      <div class="text-center mb-5">
-        <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Gallery</p>
-        <h2 class="display-5 fw-bold mb-3">Explore our  Gallery</h2>
-          <div class="row mt-5 mb-5 gallery_images">
-              <div class="col-12">
-                  <div class="d-flex flex-wrap justify-content-center gap-2" id="category-filters">
-                      <button type="button" 
-                              class="btn btn-outline-primary active filter-btn" 
-                              data-filter="all">
-                          All
-                      </button>
+        <div class="text-center mb-5">
+            <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Gallery</p>
+            <h2 class="display-5 fw-bold mb-3">Explore our Gallery</h2>
+            
+            <!-- Category Filters -->
+            <div class="row gallery_images mb-4">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center gap-2" id="category-filters">
+                        <button type="button" 
+                                class="btn btn-outline-primary active filter-btn" 
+                                data-filter="all">
+                            All
+                        </button>
 
-                      @foreach($categories as $category)
-                          <button type="button" 
-                                  class="btn btn-outline-primary filter-btn" 
-                                  data-filter="{{ Str::slug($category->id) }}">
-                              {{ $category->title }}
-                          </button>
-                      @endforeach
-                  </div>
-              </div>
-          </div>
-          <div class="row g-4" id="gallery">
-              @forelse($images as $image)
-                  <div class="col-sm-6 col-md-4 col-lg-3 gallery-item" 
-                        data-category="{{ Str::slug($image->slier_for) }}">
-                      <div class="card h-100 border-0 shadow-sm overflow-hidden">
-                          <div class="ratio ratio-4x3">
-                              <img src="{{ $image->image }}" 
-                                    class="card-img-top object-fit-cover" 
-                                    alt="{{ $image->title }}"
-                                    loading="lazy">
-                          </div>
-                          <div class="card-body">
-                              <h6 class="card-title mb-1">{{ $image->title }}</h6>
-                                <!-- @foreach($categories as $category)
-                                @if($category->id == $image->slier_for)
-                                  <small class="text-muted">{{ $category->title }}</small> 
-                              @endif
-                              @endforeach -->
-                          </div>
-                      </div>
-                  </div>
-              @empty
-                  <div class="col-12 text-center py-5">
-                      <p class="text-muted">No images found.</p>
-                  </div>
-              @endforelse
-          </div>
-      </div>
+                        @foreach($categories as $category)
+                            <button type="button" 
+                                    class="btn btn-outline-primary filter-btn" 
+                                    data-filter="{{ Str::slug($category->id) }}">
+                                {{ $category->title }}
+                            </button>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4" id="gallery">
+                @forelse($images as $image)
+                    <div class="col-4 col-sm-6 col-md-4 col-lg-3 gallery-item" 
+                         data-category="{{ Str::slug($image->slier_for) }}">
+                        <div class="card h-100 border-0 shadow-sm overflow-hidden img-popup-card">
+                            <div class="ratio ratio-4x3 img-popup-trigger" style="cursor: pointer;">
+                                <img src="{{ $image->image }}" 
+                                     class="card-img-top object-fit-cover img-popup-target" 
+                                     alt="{{ $image->title }}"
+                                     loading="lazy">
+                                <div class="img-popup-overlay">
+                                    <span class="img-popup-zoom-icon">&#128065;</span>
+                                </div>
+                            </div>
+                            <div class="card-body text-start">
+                                <h6 class="card-title mb-1 img-popup-title">{{ $image->title }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <div class="col-12 text-center py-5">
+                        <p class="text-muted">No images found.</p>
+                    </div>
+                @endforelse
+            </div>
+        </div>
     </div>
-  </section>
+</section>
+
+<!-- Unique Popup Slider Modal -->
+<div class="img-slider-modal-overlay" id="imgSliderModal">
+    <button type="button" class="img-slider-btn img-slider-close" id="imgSliderClose">&times;</button>
+    
+    <button type="button" class="img-slider-btn img-slider-prev" id="imgSliderPrev">&#10094;</button>
+    
+    <div class="img-slider-modal-content">
+        <img id="imgSliderActiveImg" src="" alt="Popup Image">
+        <div class="img-slider-caption" id="imgSliderCaption"></div>
+        <div class="img-slider-counter" id="imgSliderCounter">1 / 1</div>
+    </div>
+
+    <button type="button" class="img-slider-btn img-slider-next" id="imgSliderNext">&#10095;</button>
+</div>
+
+
+
 
 
 
