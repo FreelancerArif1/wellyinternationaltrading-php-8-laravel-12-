@@ -144,124 +144,7 @@
 
 
 
-    <!-- ========== Our team ========== -->
-    <section class="our-team-section">
-        <div class="container">
 
-          <div class="row">
-            <div class="text-center mb-5">
-              <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Members</p>
-              <h2 class="display-5 fw-bold mb-3"> Company Members </h2>
-            </div>
-          </div>
-
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="our-team">
-                        <div class="pic">
-                            <img src="/uploads/team/KageiHua.png">
-                        </div>
-                        <div class="team-content">
-                            <h3 class="title">Kagei Hua</h3>
-                            <span class="post">Chairman</span>
-                        </div>
-                        <ul class="social">
-                            <li>
-                                <a href="#"  target="_blank"class="fa fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-instagram"></a>
-                                
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-linkedin"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="our-team">
-                        <div class="pic">
-                            <img src="/uploads/team/ChrisWang.png">
-                        </div>
-                        <div class="team-content">
-                            <h3 class="title">Chris Wang</h3>
-                            <span class="post">Chief Executive Officer (CEO)</span>
-                        </div>
-                        <ul class="social">
-                            <li>
-                                <a href="#" class="fa fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-instagram"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-linkedin"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="our-team">
-                        <div class="pic">
-                            <img src="/uploads/team/VincentLiu.png">
-                        </div>
-                        <div class="team-content">
-                            <h3 class="title">Vincent Liu</h3>
-                            <span class="post">Chief Operational Officer (COO) </span>
-                        </div>
-                        <ul class="social">
-                            <li>
-                                <a href="#" class="fa fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-instagram"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-linkedin"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="our-team">
-                        <div class="pic">
-                            <img src="/uploads/team/RosaHua.png">
-                        </div>
-                        <div class="team-content">
-                            <h3 class="title">Rosa Hua</h3>
-                            <span class="post">Executive Consultant (EC) </span>
-                        </div>
-                        <ul class="social">
-                            <li>
-                                <a href="#" class="fa fa-facebook"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-twitter"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-instagram"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-linkedin"></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
   <!-- ========== PRODUCTION SOLUTIONS ========== -->
@@ -449,6 +332,129 @@
 
     <button type="button" class="img-slider-btn img-slider-next" id="imgSliderNext">&#10095;</button>
 </div>
+
+
+
+
+
+    <!-- ========== Our team ========== -->
+    <section class="our-team-section">
+        <div class="container">
+
+          <div class="row">
+            <div class="text-center mb-5">
+              <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Members</p>
+              <h2 class="display-5 fw-bold mb-3"> Company Members </h2>
+            </div>
+          </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="/uploads/team/KageiHua.png">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Kagei Hua</h3>
+                            <span class="post">Chairman</span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#"  target="_blank"class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                                
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="/uploads/team/ChrisWang.png">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Chris Wang</h3>
+                            <span class="post">Chief Executive Officer (CEO)</span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="/uploads/team/VincentLiu.png">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Vincent Liu</h3>
+                            <span class="post">Chief Operational Officer (COO) </span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="our-team">
+                        <div class="pic">
+                            <img src="/uploads/team/RosaHua.png">
+                        </div>
+                        <div class="team-content">
+                            <h3 class="title">Rosa Hua</h3>
+                            <span class="post">Executive Consultant (EC) </span>
+                        </div>
+                        <ul class="social">
+                            <li>
+                                <a href="#" class="fa fa-facebook"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-twitter"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
