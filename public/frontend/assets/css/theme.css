@@ -584,7 +584,7 @@ html {
 }
   .hero-title {
     /* color: rgb(198 198 198); */
-    color: #ddd;
+    color: var(--primary-red) !important;
   }
 #home .hero-subtitle{
   /* color: #fff !important; */
