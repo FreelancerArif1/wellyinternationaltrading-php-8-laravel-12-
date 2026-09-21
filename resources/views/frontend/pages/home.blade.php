@@ -19,7 +19,7 @@
           Shanghai Welly International Trading Ltd. is a professional international sourcing and trading company headquartered in Shanghai, China, conveniently located near Hongqiao Airport and Railway Station. We care about what our clients actually need and help them solve the issues, instead of just selling what we have.    
          
         </p>
-          <div class="d-flex flex-wrap gap-3">
+          <div class="d-flex flex-wrap gap-3 home_banner_button">
             <a href="#services" class="btn btn-danger btn-lg px-4"> Solutions</a>
             <a href="/contact-us" class="btn btn-danger btn-lg px-4">Contact Us</a>
           </div>
@@ -48,8 +48,8 @@
   <section id="about-us" class="py-5 bg-light">
     <div class="container py-4">
       <div class="text-center mb-5">
-        <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Introduction</p>
-        <h2 class="display-5 fw-bold mb-3">Explore our <br> Company Introduction</h2>
+        <!-- <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Introduction</p> -->
+        <h2 class="display-5 fw-bold mb-3"> Company <br> Introduction</h2>
         <p class="text-muted col-lg-10 mx-auto company_introduction">
         {{ Helper::getSettings('application_toll_free') ?: '#' }}</p>
       </div>
@@ -62,8 +62,8 @@
   <section id="services" class="py-5 bg-light">
     <div class="container py-4">
       <div class="text-center mb-5">
-        <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Core Solutions</p>
-        <h2 class="display-5 fw-bold mb-3">Explore our extensive<br>service offerings</h2>
+        <!-- <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Core Solutions</p> -->
+        <h2 class="display-5 fw-bold mb-3"> Our Specialities</h2>
         <p class="text-muted col-lg-8 mx-auto">
           Choose a partner that covers the full stack—fixtures, dispensing, and MRO—so you spend less time coordinating vendors and more time hitting yield, takt, and budget. We standardize what should be standard, and custom-engineer what must be bespoke.
         </p>
@@ -91,99 +91,6 @@
       </div>
     </div>
   </section>
-
-
-
-  
-
-
-  <!-- ========== INTEGRATED SOLUTIONS / STATS ========== -->
-  <!-- <section id="about" class="py-5 bg-dark text-white">
-    <div class="container py-4">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Modern solutions</p>
-          <h2 class="display-5 fw-bold mb-3">Integrated solutions<br>for manufacturing</h2>
-          <p class="text-white-50 mb-4">
-            We combine engineering fixtures &amp; jigs, precision dispensing, and MRO procurement to keep your production precise, scalable, and cost-efficient—with on-site, end-to-end service.
-          </p>
-          <a href="#about" class="btn btn-outline-light">About Us</a>
-        </div>
-        <div class="col-lg-6">
-          <div class="row g-4 text-center">
-            <div class="col-6">
-              <div class="stat-box p-3">
-                <h3 class="display-4 fw-bold text-danger mb-0 counter" data-target="15">0</h3>
-                <p class="mb-0 text-white-50">Years in Operation</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="stat-box p-3">
-                <h3 class="display-4 fw-bold text-danger mb-0 counter" data-target="5000">0</h3>
-                <p class="mb-0 text-white-50">Products &amp; Variants</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="stat-box p-3">
-                <h3 class="display-4 fw-bold text-danger mb-0 counter" data-target="1200">0</h3>
-                <p class="mb-0 text-white-50">Projects Delivered</p>
-              </div>
-            </div>
-            <div class="col-6">
-              <div class="stat-box p-3">
-                <h3 class="display-4 fw-bold text-danger mb-0 counter" data-target="350">0</h3>
-                <p class="mb-0 text-white-50">Customers Served</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
-
-
-
-
-
-  <!-- ========== PRODUCTION SOLUTIONS ========== -->
-  <!-- <section class="py-5">
-    <div class="container py-4">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-          <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Our innovations</p>
-          <h2 class="display-5 fw-bold mb-3">Production solutions<br>that actually last</h2>
-          <p class="text-muted mb-4">
-            We align fixtures &amp; jigs, precision dispensing, and one-stop MRO so your line runs faster, cleaner, and cheaper—without trading off quality. From pilot to volume, we standardize what should be standard and custom-engineer what must be bespoke.
-          </p>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Inline dispensing</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Laser auto-height</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Auto weighing</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <ul class="list-unstyled">
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Vision alignment</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>Jet valve options</li>
-                <li class="mb-2"><i class="bi bi-check-circle-fill text-danger me-2"></i>On-site service</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <img src="https://newlead.asia/wp-content/uploads/2025/10/Home-3.jpg" alt="Production Solutions" class="img-fluid rounded-3 shadow">
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-
-
-
 
 
 
@@ -264,8 +171,8 @@
 <section id="introduction" class="py-5 bg-light">
     <div class="container py-4">
         <div class="text-center mb-5">
-            <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Gallery</p>
-            <h2 class="display-5 fw-bold mb-3">Explore our Gallery</h2>
+            <!-- <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Gallery</p> -->
+            <h2 class="display-5 fw-bold mb-3">Our Gallery</h2>
             
             <!-- Category Filters -->
             <div class="row gallery_images">
@@ -343,8 +250,8 @@
 
           <div class="row">
             <div class="text-center mb-5">
-              <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Members</p>
-              <h2 class="display-5 fw-bold mb-3"> Company Members </h2>
+              <!-- <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Members</p> -->
+              <h2 class="display-5 fw-bold mb-3"> Company  <br> Members </h2>
             </div>
           </div>
 
@@ -468,8 +375,8 @@
   <!-- ========== CONTACT / CTA ========== -->
   <section id="contact" class="py-5 bg-danger text-white bg-welly2">
     <div class="container py-5 text-center">
-      <p class="text-uppercase fw-semibold small letter-spacing mb-2 opacity-75">Contact us</p>
-      <h2 class="display-4 fw-bold mb-3">Have a cool project?<br>Get in touch!</h2>
+      <!-- <p class="text-uppercase fw-semibold small letter-spacing mb-2 opacity-75">Contact us</p> -->
+      <h2 class="display-4 fw-bold mb-3">Get in touch!</h2>
       <p class="lead mb-4 col-lg-6 mx-auto opacity-90">
         Ready to improve your production line? Reach out for a consultation or request a quote today.
       </p>
@@ -488,25 +395,25 @@
             <div class="row g-3">
                 <div class="col-md-6">
                   <label for="name" class="form-label">Your Name</label>
-                  <input type="text" class="form-control" id="name" name="name" required>
+                  <input type="text" class="form-control" id="name" name="name" required placeholder="Your Name">
                 </div>
                 <div class="col-md-6">
                   <label for="name" class="form-label">Your Phone</label>
-                  <input type="text" class="form-control" id="name" name="phone" required>
+                  <input type="text" class="form-control" id="name" name="phone" required placeholder="Your Name">
                 </div>
 
 
                 <div class="col-md-6">
                   <label for="email" class="form-label">Email Address</label>
-                  <input type="email" class="form-control" id="email" name="email" required>
+                  <input type="email" class="form-control" id="email" name="email" required placeholder="Your Email">
                 </div>
                 <div class="col-6">
                   <label for="subject" class="form-label">Subject</label>
-                  <input type="text" class="form-control" id="subject" name="subject" required>
+                  <input type="text" class="form-control" id="subject" name="subject" required placeholder="Subject">
                 </div>
                 <div class="col-12">
                   <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" rows="4"  name="message" required></textarea>
+                  <textarea class="form-control" id="message" rows="4"  name="message" required placeholder="Write Message"></textarea>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-danger w-100 py-2">Send Message</button>

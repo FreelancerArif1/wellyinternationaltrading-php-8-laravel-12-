@@ -11,11 +11,14 @@ a{
   text-decoration: none;
 }
 :root {
-  --primary-red: #dc9200;
+  /* --primary-red: #dc9200; */
+      --primary-red: #dbb651 !important;
   --dark-text: #1a1a1a;
   --muted: #6c757d;
 }
-
+.home_banner_button .btn{
+    background: none;
+}
 body {
   font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
   color: var(--dark-text);
@@ -583,8 +586,7 @@ html {
     align-items: center;
 }
   .hero-title {
-    /* color: rgb(198 198 198); */
-    color: #dc9200 !important;
+       color: #dbb651 !important;
   }
 #home .hero-subtitle{
   /* color: #fff !important; */
