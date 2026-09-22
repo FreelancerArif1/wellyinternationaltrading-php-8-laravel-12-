@@ -136,6 +136,14 @@
                                 placeholder="Keywords">
                         </div>
                     </div>
+                    <div class="form-group row">
+                        <label for="" class="col-sm-3 col-form-label">Homepage Headline</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="homepageheadline"
+                                value="{{ Helper::getSettings('homepageheadline') }}" class="form-control"
+                                placeholder="Homepage Headline">
+                        </div>
+                    </div>
                     <div class="form-group text-end">
                         <button type="submit" class="btn btn-primary">Update</button>
                     </div>

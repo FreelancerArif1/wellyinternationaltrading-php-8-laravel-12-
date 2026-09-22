@@ -12,8 +12,9 @@
       <div class="row align-items-center min-vh-75">
         <div class="col-lg-10">
           <h1 class="hero-title display-2 fw-bold mb-3">
-            <span class="text-dark-changed">At welly trading</span><br>
-            <span class="text-danger-changed">Every trade will be <br>  welly done</span>
+            <span class="text-dark-changed"> 
+              {!! Helper::getSettings('homepageheadline') !!}
+            </span>
           </h1>
           <p class="hero-subtitle lead text-muted mb-4 col-lg-10">
           Shanghai Welly International Trading Ltd. is a professional international sourcing and trading company headquartered in Shanghai, China, conveniently located near Hongqiao Airport and Railway Station. We care about what our clients actually need and help them solve the issues, instead of just selling what we have.    
