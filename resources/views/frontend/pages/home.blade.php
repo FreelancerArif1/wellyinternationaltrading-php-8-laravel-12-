@@ -45,23 +45,19 @@
 
 
 
-<!-- ========== Company Introduction ========== -->
-<section id="about-us">
-  <div class="parallax-bg"></div>
-  <div class="about_overlay">
+    <!-- ========== Company Introduction ========== -->
+  <section id="about-us" class="bg-light">
+    <div class="about_overlay">
     <div class="container py-4">
       <div class="text-center mb-5">
+        <!-- <p class="text-uppercase text-danger fw-semibold small letter-spacing mb-2">Introduction</p> -->
         <h2 class="display-5 fw-bold mb-3"> Company <br> Introduction</h2>
         <p class="text-muted col-lg-10 mx-auto company_introduction">
-          {{ Helper::getSettings('application_toll_free') ?: '#' }}
-        </p>
+        {{ Helper::getSettings('application_toll_free') ?: '#' }}</p>
       </div>
     </div>
-  </div>
-</section>
-
-
-
+    </div>
+  </section>
 
 
 
@@ -603,22 +599,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateVisibleGallery();
         });
     });
-});
-
-
-
-
-
-
-
-
-window.addEventListener('scroll', function() {
-  const parallax = document.querySelector('.parallax-bg');
-  if (!parallax) return;
-  
-  let scrollPosition = window.pageYOffset;
-  // Adjust 0.3 to change scroll speed (0.1 = slow, 0.5 = fast)
-  parallax.style.transform = 'translateY(' + (scrollPosition * 0.3) + 'px)';
 });
 </script>
 
