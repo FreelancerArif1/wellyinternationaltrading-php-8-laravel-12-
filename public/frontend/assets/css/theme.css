@@ -594,7 +594,7 @@ html {
     background: #ffffffed; /* Your overlay color */
 }
 #about-us h2{
-  color: var(--bs-secondary-color) !important;
+  color: #000 !important;
 }
 
 
