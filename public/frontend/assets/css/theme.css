@@ -577,6 +577,14 @@ html {
      border-bottom: 1px solid #dddddd38;
   color: #fff;
 }
+#about-us {
+    background-image: url(../img/map.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #0a1630;
+    color: #fff;
+}
 
 .hero-section-2 {
     position: relative;
