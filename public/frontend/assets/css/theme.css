@@ -80,7 +80,7 @@ h1, h2, h3, .display-2, .display-4, .display-5 {
 /* Hero */
 .hero-section {
   position: relative;
-  padding: 3rem 0 2rem;
+  padding: 3.5rem 0 2rem;
   background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
   min-height: 70vh;
   display: flex;
@@ -108,7 +108,7 @@ h1, h2, h3, .display-2, .display-4, .display-5 {
 
 .hero-social {
     position: absolute;
-    bottom: 2.5rem;
+    /* bottom: 2.5rem; */
     right: 0;
     left: 0;
     font-size: 0.85rem;
@@ -577,18 +577,52 @@ html {
      border-bottom: 1px solid #dddddd38;
   color: #fff;
 }
+
+
+
+
+
+
+
+
 #about-us {
+    position: relative;
+    overflow: hidden; /* Clips image overflow */
+    color: #fff;
+    background-color: #0a1630;
+}
+
+/* Position image absolutely behind content */
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%; /* Extra height gives room to scroll */
     background-image: url(../img/map.png);
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-color: #0a1630;
-    color: #fff;
+    z-index: 1;
+    will-change: transform;
 }
+
+.about_overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 0, 0, 0.5); /* Your overlay color */
+}
+
+
+
+
+
+
+
 
 .hero-section-2 {
     position: relative;
-    padding: 0rem 0 6rem;
+    padding: 0rem 0 3rem;
     background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
     display: flex;
     align-items: center;
